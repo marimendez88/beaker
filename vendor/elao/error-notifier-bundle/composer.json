@@ -1,0 +1,37 @@
+{
+    "name":        "elao/error-notifier-bundle",
+    "type":        "symfony-bundle",
+    "description": "This bundle sends a html email when an error occurs.",
+    "keywords":    ["elao", "error", "notifier", "bundle"],
+    "homepage":    "http://github.com/Elao/ErrorNotifierBundle",
+    "license":     "MIT",
+
+    "authors": [
+        {
+            "name": "Elao Team",
+            "homepage": "http://www.elao.com"
+        },
+        {
+            "name": "Contributors",
+            "homepage": "http://github.com/Elao/ErrorNotifierBundle/contributors"
+        }
+    ],
+
+    "require": {
+        "php":                      ">=5.3.2",
+        "symfony/framework-bundle": "~2.3|~3.0",
+        "symfony/console":          "~2.3|~3.0",
+        "swiftmailer/swiftmailer":  "~5.0"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "Elao\\ErrorNotifierBundle\\": ""
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}

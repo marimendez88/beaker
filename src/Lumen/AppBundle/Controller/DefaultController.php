@@ -19,7 +19,7 @@ class DefaultController extends Controller
     public function indexAction()
     {
 
-        return array('message' => 'Hola!!');
+        return array('message' => 'Hola, esto es beaker!!');
     }
 
 

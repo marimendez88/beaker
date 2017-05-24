@@ -1,0 +1,38 @@
+{
+    "name": "prezent/doctrine-translatable-bundle",
+    "type": "library",
+    "description": "Integrate the doctrine-translatable extension in Symfony2",
+    "keywords": [
+        "doctrine2",
+        "extensions",
+        "translatable",
+        "i18n",
+        "symfony2",
+        "bundle"
+    ],
+    "homepage": "http://www.prezent.nl",
+    "authors": [{
+        "name": "Prezent Internet B.V.",
+        "email": "github@prezent.nl"
+    }],
+    "license": "MIT",
+    "support": {
+        "wiki": "https://github.com/prezent/doctrine-translatable-bundle/tree/master/Resources/doc",
+        "issues": "https://github.com/prezent/doctrine-translatable-bundle/issues",
+        "source": "https://github.com/prezent/doctrine-translatable-bundle"
+    },
+    "require": {
+        "doctrine/doctrine-bundle": "~1.2",
+        "prezent/doctrine-translatable": ">=0.2,<0.3-dev",
+        "symfony/symfony": "~2.2"
+    },
+    "autoload": {
+        "psr-0": { "Prezent\\Doctrine\\TranslatableBundle": "" }
+    },
+    "target-dir": "Prezent/Doctrine/TranslatableBundle",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.3.x-dev"
+        }
+    }
+}
