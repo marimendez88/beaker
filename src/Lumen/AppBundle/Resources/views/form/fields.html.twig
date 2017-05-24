@@ -1,0 +1,13 @@
+
+{% block choice_widget_expanded %}
+    {% spaceless %}
+        {#<div {{ block('widget_container_attributes') }}>#}
+            {% for child in form %}
+                    {#<div class="col-md-6">#}
+                        {{ form_widget(child, {'attr': {'class': attr.widget_class|default(''),'required': 'required'}}) }}
+                        <label for="{{ child.vars.id }}">{{ child.vars.label|trans({}, translation_domain) }}</label>
+                    {#</div>#}
+            {% endfor %}
+        {#</div>#}
+    {% endspaceless %}
+{% endblock choice_widget_expanded %}
