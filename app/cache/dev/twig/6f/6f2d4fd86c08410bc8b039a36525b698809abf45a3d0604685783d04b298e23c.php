@@ -17,11 +17,11 @@ class __TwigTemplate_3466a7a4e5f3b7595226fd3520c0dcbc74d46545dcca6dfa20418a4df84
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_7fb9f48421b2ac8a159e5b53293d3cfba4526ce44fb5f0d74bf93c99f2bc89fe = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_7fb9f48421b2ac8a159e5b53293d3cfba4526ce44fb5f0d74bf93c99f2bc89fe->enter($__internal_7fb9f48421b2ac8a159e5b53293d3cfba4526ce44fb5f0d74bf93c99f2bc89fe_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ComurImageBundle:Form:croppable_image_modal.html.twig"));
+        $__internal_0bcfe1749d54f9595aa5a06c9e3d9813bdf48208d25837c7b6b7e6e5be24e4b1 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_0bcfe1749d54f9595aa5a06c9e3d9813bdf48208d25837c7b6b7e6e5be24e4b1->enter($__internal_0bcfe1749d54f9595aa5a06c9e3d9813bdf48208d25837c7b6b7e6e5be24e4b1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "ComurImageBundle:Form:croppable_image_modal.html.twig"));
 
         // line 1
-        $context["__internal_5c961449f3f4c60e0ee4f48c6e70a201348384367dabdd72392d469b1f732cce"] = ($context["comur_translation_domain"] ?? $this->getContext($context, "comur_translation_domain"));
+        $context["__internal_143a85ba48f8ae1300ceba1ba8fefe2619f8edd018a2e45b34fcfa7aa40f6b9b"] = ($context["comur_translation_domain"] ?? $this->getContext($context, "comur_translation_domain"));
         // line 3
         echo "
 ";
@@ -42,7 +42,7 @@ class __TwigTemplate_3466a7a4e5f3b7595226fd3520c0dcbc74d46545dcca6dfa20418a4df84
                 <h3>";
         // line 40
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->getTranslator()->trans("Insert Image", array(),         // line 1
-($context["__internal_5c961449f3f4c60e0ee4f48c6e70a201348384367dabdd72392d469b1f732cce"] ?? $this->getContext($context, "__internal_5c961449f3f4c60e0ee4f48c6e70a201348384367dabdd72392d469b1f732cce")));
+($context["__internal_143a85ba48f8ae1300ceba1ba8fefe2619f8edd018a2e45b34fcfa7aa40f6b9b"] ?? $this->getContext($context, "__internal_143a85ba48f8ae1300ceba1ba8fefe2619f8edd018a2e45b34fcfa7aa40f6b9b")));
         // line 40
         echo "</h3>
             </div>
@@ -52,20 +52,20 @@ class __TwigTemplate_3466a7a4e5f3b7595226fd3520c0dcbc74d46545dcca6dfa20418a4df84
                         <a href=\"#upload-image\" data-toggle=\"tab\">";
         // line 45
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->getTranslator()->trans("Upload Image", array(),         // line 1
-($context["__internal_5c961449f3f4c60e0ee4f48c6e70a201348384367dabdd72392d469b1f732cce"] ?? $this->getContext($context, "__internal_5c961449f3f4c60e0ee4f48c6e70a201348384367dabdd72392d469b1f732cce")));
+($context["__internal_143a85ba48f8ae1300ceba1ba8fefe2619f8edd018a2e45b34fcfa7aa40f6b9b"] ?? $this->getContext($context, "__internal_143a85ba48f8ae1300ceba1ba8fefe2619f8edd018a2e45b34fcfa7aa40f6b9b")));
         // line 45
         echo "</a>
                     </li>
                     <li><a href=\"#select-existing\" data-toggle=\"tab\">";
         // line 47
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->getTranslator()->trans("Select Existing", array(),         // line 1
-($context["__internal_5c961449f3f4c60e0ee4f48c6e70a201348384367dabdd72392d469b1f732cce"] ?? $this->getContext($context, "__internal_5c961449f3f4c60e0ee4f48c6e70a201348384367dabdd72392d469b1f732cce")));
+($context["__internal_143a85ba48f8ae1300ceba1ba8fefe2619f8edd018a2e45b34fcfa7aa40f6b9b"] ?? $this->getContext($context, "__internal_143a85ba48f8ae1300ceba1ba8fefe2619f8edd018a2e45b34fcfa7aa40f6b9b")));
         // line 47
         echo "</a></li>
                     <li><a href=\"#crop-and-use\" data-toggle=\"tab\">";
         // line 48
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->getTranslator()->trans("Crop and Use", array(),         // line 1
-($context["__internal_5c961449f3f4c60e0ee4f48c6e70a201348384367dabdd72392d469b1f732cce"] ?? $this->getContext($context, "__internal_5c961449f3f4c60e0ee4f48c6e70a201348384367dabdd72392d469b1f732cce")));
+($context["__internal_143a85ba48f8ae1300ceba1ba8fefe2619f8edd018a2e45b34fcfa7aa40f6b9b"] ?? $this->getContext($context, "__internal_143a85ba48f8ae1300ceba1ba8fefe2619f8edd018a2e45b34fcfa7aa40f6b9b")));
         // line 48
         echo "</a></li>
                 </ul>
@@ -80,13 +80,13 @@ class __TwigTemplate_3466a7a4e5f3b7595226fd3520c0dcbc74d46545dcca6dfa20418a4df84
                             <p>";
         // line 58
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->getTranslator()->trans("Drop your file here", array(),         // line 1
-($context["__internal_5c961449f3f4c60e0ee4f48c6e70a201348384367dabdd72392d469b1f732cce"] ?? $this->getContext($context, "__internal_5c961449f3f4c60e0ee4f48c6e70a201348384367dabdd72392d469b1f732cce")));
+($context["__internal_143a85ba48f8ae1300ceba1ba8fefe2619f8edd018a2e45b34fcfa7aa40f6b9b"] ?? $this->getContext($context, "__internal_143a85ba48f8ae1300ceba1ba8fefe2619f8edd018a2e45b34fcfa7aa40f6b9b")));
         // line 58
         echo "</p>
                             <p>";
         // line 59
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->getTranslator()->trans("or", array(),         // line 1
-($context["__internal_5c961449f3f4c60e0ee4f48c6e70a201348384367dabdd72392d469b1f732cce"] ?? $this->getContext($context, "__internal_5c961449f3f4c60e0ee4f48c6e70a201348384367dabdd72392d469b1f732cce")));
+($context["__internal_143a85ba48f8ae1300ceba1ba8fefe2619f8edd018a2e45b34fcfa7aa40f6b9b"] ?? $this->getContext($context, "__internal_143a85ba48f8ae1300ceba1ba8fefe2619f8edd018a2e45b34fcfa7aa40f6b9b")));
         // line 59
         echo "</p>
                         </div>
@@ -96,7 +96,7 @@ class __TwigTemplate_3466a7a4e5f3b7595226fd3520c0dcbc74d46545dcca6dfa20418a4df84
                                 <span> ";
         // line 64
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->getTranslator()->trans("Select a file...", array(),         // line 1
-($context["__internal_5c961449f3f4c60e0ee4f48c6e70a201348384367dabdd72392d469b1f732cce"] ?? $this->getContext($context, "__internal_5c961449f3f4c60e0ee4f48c6e70a201348384367dabdd72392d469b1f732cce")));
+($context["__internal_143a85ba48f8ae1300ceba1ba8fefe2619f8edd018a2e45b34fcfa7aa40f6b9b"] ?? $this->getContext($context, "__internal_143a85ba48f8ae1300ceba1ba8fefe2619f8edd018a2e45b34fcfa7aa40f6b9b")));
         // line 64
         echo "</span>
                                 <input id=\"image_upload_file\" type=\"file\" name=\"image_upload_file\">
@@ -120,14 +120,14 @@ class __TwigTemplate_3466a7a4e5f3b7595226fd3520c0dcbc74d46545dcca6dfa20418a4df84
                         <p>";
         // line 83
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->getTranslator()->trans("Please adjust selection to your image", array(),         // line 1
-($context["__internal_5c961449f3f4c60e0ee4f48c6e70a201348384367dabdd72392d469b1f732cce"] ?? $this->getContext($context, "__internal_5c961449f3f4c60e0ee4f48c6e70a201348384367dabdd72392d469b1f732cce")));
+($context["__internal_143a85ba48f8ae1300ceba1ba8fefe2619f8edd018a2e45b34fcfa7aa40f6b9b"] ?? $this->getContext($context, "__internal_143a85ba48f8ae1300ceba1ba8fefe2619f8edd018a2e45b34fcfa7aa40f6b9b")));
         // line 83
         echo "</p>
                         <div class=\"image_preview\" id=\"image_preview\" style=\"z-index: 1050\">
                             <p>";
         // line 85
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->getTranslator()->trans("Please select or upload an image", array(),         // line 1
-($context["__internal_5c961449f3f4c60e0ee4f48c6e70a201348384367dabdd72392d469b1f732cce"] ?? $this->getContext($context, "__internal_5c961449f3f4c60e0ee4f48c6e70a201348384367dabdd72392d469b1f732cce")));
+($context["__internal_143a85ba48f8ae1300ceba1ba8fefe2619f8edd018a2e45b34fcfa7aa40f6b9b"] ?? $this->getContext($context, "__internal_143a85ba48f8ae1300ceba1ba8fefe2619f8edd018a2e45b34fcfa7aa40f6b9b")));
         // line 85
         echo "</p>
                         </div>
@@ -137,7 +137,7 @@ class __TwigTemplate_3466a7a4e5f3b7595226fd3520c0dcbc74d46545dcca6dfa20418a4df84
                     <button class=\"btn\" data-dismiss=\"modal\" aria-hidden=\"true\">";
         // line 90
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->getTranslator()->trans("Close", array(),         // line 1
-($context["__internal_5c961449f3f4c60e0ee4f48c6e70a201348384367dabdd72392d469b1f732cce"] ?? $this->getContext($context, "__internal_5c961449f3f4c60e0ee4f48c6e70a201348384367dabdd72392d469b1f732cce")));
+($context["__internal_143a85ba48f8ae1300ceba1ba8fefe2619f8edd018a2e45b34fcfa7aa40f6b9b"] ?? $this->getContext($context, "__internal_143a85ba48f8ae1300ceba1ba8fefe2619f8edd018a2e45b34fcfa7aa40f6b9b")));
         // line 90
         echo "</button>
                     <span class=\"btn btn-success hidden\" id=\"image_crop_go_now\">
@@ -145,7 +145,7 @@ class __TwigTemplate_3466a7a4e5f3b7595226fd3520c0dcbc74d46545dcca6dfa20418a4df84
                         ";
         // line 93
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->getTranslator()->trans("Crop & Use !", array(),         // line 1
-($context["__internal_5c961449f3f4c60e0ee4f48c6e70a201348384367dabdd72392d469b1f732cce"] ?? $this->getContext($context, "__internal_5c961449f3f4c60e0ee4f48c6e70a201348384367dabdd72392d469b1f732cce")));
+($context["__internal_143a85ba48f8ae1300ceba1ba8fefe2619f8edd018a2e45b34fcfa7aa40f6b9b"] ?? $this->getContext($context, "__internal_143a85ba48f8ae1300ceba1ba8fefe2619f8edd018a2e45b34fcfa7aa40f6b9b")));
         // line 94
         echo "                    </span>
                     <span class=\"btn btn-success hidden\" id=\"image_crop_cancel\">
@@ -153,7 +153,7 @@ class __TwigTemplate_3466a7a4e5f3b7595226fd3520c0dcbc74d46545dcca6dfa20418a4df84
                         ";
         // line 97
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->getTranslator()->trans("Cancel", array(),         // line 1
-($context["__internal_5c961449f3f4c60e0ee4f48c6e70a201348384367dabdd72392d469b1f732cce"] ?? $this->getContext($context, "__internal_5c961449f3f4c60e0ee4f48c6e70a201348384367dabdd72392d469b1f732cce")));
+($context["__internal_143a85ba48f8ae1300ceba1ba8fefe2619f8edd018a2e45b34fcfa7aa40f6b9b"] ?? $this->getContext($context, "__internal_143a85ba48f8ae1300ceba1ba8fefe2619f8edd018a2e45b34fcfa7aa40f6b9b")));
         // line 98
         echo "                    </span>
                 </div>
@@ -168,15 +168,15 @@ class __TwigTemplate_3466a7a4e5f3b7595226fd3520c0dcbc74d46545dcca6dfa20418a4df84
 </script>
 ";
         
-        $__internal_7fb9f48421b2ac8a159e5b53293d3cfba4526ce44fb5f0d74bf93c99f2bc89fe->leave($__internal_7fb9f48421b2ac8a159e5b53293d3cfba4526ce44fb5f0d74bf93c99f2bc89fe_prof);
+        $__internal_0bcfe1749d54f9595aa5a06c9e3d9813bdf48208d25837c7b6b7e6e5be24e4b1->leave($__internal_0bcfe1749d54f9595aa5a06c9e3d9813bdf48208d25837c7b6b7e6e5be24e4b1_prof);
 
     }
 
     // line 4
     public function block_comur_image_scripts($context, array $blocks = array())
     {
-        $__internal_3d393cf635688aa5ce8545f6481c46a7c66e8107febb893274361938cc5f3c65 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_3d393cf635688aa5ce8545f6481c46a7c66e8107febb893274361938cc5f3c65->enter($__internal_3d393cf635688aa5ce8545f6481c46a7c66e8107febb893274361938cc5f3c65_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "comur_image_scripts"));
+        $__internal_7ada67c8dd175897a4a77fc30b602f9ce11b5819cc84315619c1fe84d0a52af4 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_7ada67c8dd175897a4a77fc30b602f9ce11b5819cc84315619c1fe84d0a52af4->enter($__internal_7ada67c8dd175897a4a77fc30b602f9ce11b5819cc84315619c1fe84d0a52af4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "comur_image_scripts"));
 
         // line 5
         if (( !array_key_exists("include_jquery", $context) || ($context["include_jquery"] ?? $this->getContext($context, "include_jquery")))) {
@@ -234,15 +234,15 @@ class __TwigTemplate_3466a7a4e5f3b7595226fd3520c0dcbc74d46545dcca6dfa20418a4df84
         echo "\"></script>
 ";
         
-        $__internal_3d393cf635688aa5ce8545f6481c46a7c66e8107febb893274361938cc5f3c65->leave($__internal_3d393cf635688aa5ce8545f6481c46a7c66e8107febb893274361938cc5f3c65_prof);
+        $__internal_7ada67c8dd175897a4a77fc30b602f9ce11b5819cc84315619c1fe84d0a52af4->leave($__internal_7ada67c8dd175897a4a77fc30b602f9ce11b5819cc84315619c1fe84d0a52af4_prof);
 
     }
 
     // line 26
     public function block_comur_image_stylesheets($context, array $blocks = array())
     {
-        $__internal_f13e4b965fb122d461e97a824161abcb5d66dff72b444ee5f7e853d6b44a247e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_f13e4b965fb122d461e97a824161abcb5d66dff72b444ee5f7e853d6b44a247e->enter($__internal_f13e4b965fb122d461e97a824161abcb5d66dff72b444ee5f7e853d6b44a247e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "comur_image_stylesheets"));
+        $__internal_7be92d300ea1f3ff37d30c111700143896a75ad2facd71abed81d4768d5e6b56 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_7be92d300ea1f3ff37d30c111700143896a75ad2facd71abed81d4768d5e6b56->enter($__internal_7be92d300ea1f3ff37d30c111700143896a75ad2facd71abed81d4768d5e6b56_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "comur_image_stylesheets"));
 
         // line 27
         echo "<link rel=\"stylesheet\" href=\"";
@@ -265,7 +265,7 @@ class __TwigTemplate_3466a7a4e5f3b7595226fd3520c0dcbc74d46545dcca6dfa20418a4df84
         echo "\" type=\"text/css\" />
 ";
         
-        $__internal_f13e4b965fb122d461e97a824161abcb5d66dff72b444ee5f7e853d6b44a247e->leave($__internal_f13e4b965fb122d461e97a824161abcb5d66dff72b444ee5f7e853d6b44a247e_prof);
+        $__internal_7be92d300ea1f3ff37d30c111700143896a75ad2facd71abed81d4768d5e6b56->leave($__internal_7be92d300ea1f3ff37d30c111700143896a75ad2facd71abed81d4768d5e6b56_prof);
 
     }
 
