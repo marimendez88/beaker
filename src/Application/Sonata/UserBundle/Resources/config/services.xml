@@ -6,13 +6,13 @@
 
     <!--
     <parameters>
-        <parameter key="lumen_user.example.claLabumen\UserBundle\Example</parameter>
+        <parameter key="Beaker_user.example.claLabumen\UserBundle\Example</parameter>
     </parameters> 
    -->
     <services>
 
-        <service id="lumen_user.registration.form.type" class="Application\Sonata\UserBundle\Form\Type\RegistrationFormType">
-            <tag name="form.type" alias="lumen_user_registration" />
+        <service id="Beaker_user.registration.form.type" class="Application\Sonata\UserBundle\Form\Type\RegistrationFormType">
+            <tag name="form.type" alias="Beaker_user_registration" />
             <argument>%fos_user.model.user.class%</argument>
         </service>
 
