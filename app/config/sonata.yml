@@ -1,5 +1,5 @@
 sonata_admin:
-    title:      'Base Symfony 2.8.13'
+    title:      'Beaker'
     title_logo: /img/logotype/logo.png
     templates:
         # default global templates
