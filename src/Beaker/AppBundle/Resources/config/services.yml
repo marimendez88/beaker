@@ -1,7 +1,0 @@
-services:
-#    Beaker_app.admin.usuario:
-#        class: Beaker\AppBundle\Admin\UsuarioAdmin
-#        arguments: [~, Beaker\AppBundle\Entity\Usuario, SonataAdminBundle:CRUD]
-#        tags:
-#            - {name: sonata.admin, manager_type: orm, group: Usuario, label: Usuario}
-#

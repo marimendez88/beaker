@@ -1,0 +1,7 @@
+services:
+#    lumen_app.admin.usuario:
+#        class: Lumen\AppBundle\Admin\UsuarioAdmin
+#        arguments: [~, Lumen\AppBundle\Entity\Usuario, SonataAdminBundle:CRUD]
+#        tags:
+#            - {name: sonata.admin, manager_type: orm, group: Usuario, label: Usuario}
+#

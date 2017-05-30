@@ -20,7 +20,7 @@ class UserAdminController extends Controller
 {
     public function listAction()
     {
-        $twig = $this->container->get('Beaker.twig.load_javascrip')->include_javascript('../bundles/Beakerdate/js/src/users-import.js');
+        $twig = $this->container->get('lumen.twig.load_javascrip')->include_javascript('../bundles/lumendate/js/src/users-import.js');
         
         return parent::listAction();
     }
@@ -61,7 +61,7 @@ class UserAdminController extends Controller
                         $this->getDoctrine(), $filePath, array(), true,
                         'Application\Sonata\UserBundle\Entity\User', true,
                         function($obj, $sender){
-                            $sender->password = \Beaker\ImportsBundle\Resources\BeakerUtils\Utils::generatePassword(6);
+                            $sender->password = \Lumen\ImportsBundle\Resources\LumenUtils\Utils::generatePassword(6);
                             //$this->password = '1234';
                             $obj->setPassword($sender->password);
                             $obj->setPlainPassword($sender->password);
