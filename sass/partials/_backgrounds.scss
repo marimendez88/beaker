@@ -1,0 +1,315 @@
+.header {
+	position: relative;
+	.logo-coope {
+		position: absolute;
+		top: 30px;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+	}
+}
+
+.header-inner {
+	color: #FFF;
+	position: absolute;
+	bottom: 5%;
+	left: 0;
+	right: 0;
+	h2, p {
+		margin: 5px 0;
+	}
+}
+
+.header-title {
+	position: absolute;
+	bottom: 0;
+	h2 {
+		font-size: 24px;
+		margin-bottom: 50px;
+	}
+}
+
+.header-bg {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	color: #FFF;
+	width: 100%;
+	height: 235px;
+	position: relative;
+}
+
+.header-admin .header-bg {
+	min-width: 100%;	
+}
+
+.bg-ces {
+	background-image: url('../img/bg-header/bg-ces-mobile.jpg');
+}
+
+.bg-bienes {
+	background-image: url('../img/bg-header/bg-bienes-mobile.jpg');
+}
+
+.bg-about {
+	background-image: url('../img/bg-header/bg-about-mobile.jpg');
+}
+
+.bg-agreement {
+	background-image: url('../img/bg-header/bg-agreement-mobile.jpg');
+}
+
+.bg-contact {
+	background-image: url('../img/bg-header/bg-contact-mobile.jpg');
+}
+
+.bg-credit {
+	background-image: url('../img/bg-header/bg-credit-mobile.jpg');
+}
+
+.bg-digital {
+	background-image: url('../img/bg-header/bg-digital-mobile.jpg');
+}
+
+.bg-entrep {
+	background-image: url('../img/bg-header/bg-entrep-mobile.jpg');
+}
+
+.bg-faq {
+	background-image: url('../img/bg-header/bg-faq-mobile.jpg');
+}
+
+.bg-insurance {
+	background-image: url('../img/bg-header/bg-insurance-mobile.jpg');
+}
+
+.bg-insurance-accidents {
+	background-image: url('../img/bg-header/bg-insurance-accidents-mobile.jpg');
+}
+
+.bg-insurance-student {
+	background-image: url('../img/bg-header/bg-insurance-student-mobile.jpg');
+}
+
+.bg-insurance-health {
+	background-image: url('../img/bg-header/bg-insurance-health-mobile.jpg');
+}
+
+.bg-invest {
+	background-image: url('../img/bg-header/bg-invest-mobile.jpg');
+}
+
+.bg-join {
+	background-image: url('../img/bg-header/bg-join-mobile.jpg');
+}
+
+.bg-other {
+	background-image: url('../img/bg-header/bg-other-mobile.jpg');
+}
+
+.bg-news {
+	background-image: url('../img/bg-header/bg-news-mobile.jpg');
+}
+
+.bg-savings {
+	background-image: url('../img/bg-header/bg-savings-mobile.jpg');
+}
+
+.bg-services {
+	background-image: url('../img/bg-header/bg-services-mobile.jpg');
+}
+
+.bg-sustain {
+	background-image: url('../img/bg-header/bg-sustain-mobile.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+
+
+
+
+
+
+
+
+//pending
+
+
+.bg-register {
+	background-image: url('../img/content/bg-register.jpg');
+}
+
+.bg-news-detail, .bg-apps, .bg-rules, .bg-cards {
+	background-color: #0062AE;
+}
+
+
+
+@media screen and (min-width: 768px) {
+	.bg-ces {
+		background-image: url('../img/bg-header/bg-ces.jpg');
+	}
+	.bg-bienes {
+		background-image: url('../img/bg-header/bg-bienes.jpg');
+	}
+	.bg-about {
+		background-image: url('../img/bg-header/bg-about.jpg');
+	}
+
+	.bg-agreement {
+		background-image: url('../img/bg-header/bg-agreement.jpg');
+	}
+
+	.bg-contact {
+		background-image: url('../img/bg-header/bg-contact.jpg');
+	}
+
+	.bg-credit {
+		background-image: url('../img/bg-header/bg-credit.jpg');
+	}
+
+	.bg-digital {
+		background-image: url('../img/bg-header/bg-digital.jpg');
+	}
+
+	.bg-entrep {
+		background-image: url('../img/bg-header/bg-entrep.jpg');
+	}
+
+	.bg-faq {
+		background-image: url('../img/bg-header/bg-faq.jpg');
+	}
+
+	.bg-insurance {
+		background-image: url('../img/bg-header/bg-insurance.jpg');
+	}
+
+	.bg-insurance-accidents {
+		background-image: url('../img/bg-header/bg-insurance-accidents.jpg');
+	}
+
+	.bg-insurance-student {
+		background-image: url('../img/bg-header/bg-insurance-student.jpg');
+	}
+
+	.bg-insurance-health {
+		background-image: url('../img/bg-header/bg-insurance-health.jpg');
+	}
+
+	.bg-invest {
+		background-image: url('../img/bg-header/bg-invest.jpg');
+	}
+
+	.bg-join {
+		background-image: url('../img/bg-header/bg-join.jpg');
+	}
+
+	.bg-other {
+		background-image: url('../img/bg-header/bg-other.jpg');
+	}
+
+	.bg-news {
+		background-image: url('../img/bg-header/bg-news.jpg');
+	}
+
+	.bg-savings {
+		background-image: url('../img/bg-header/bg-savings.jpg');
+	}
+
+	.bg-services {
+		background-image: url('../img/bg-header/bg-services.jpg');
+	}
+
+	.bg-sustain {
+		background-image: url('../img/bg-header/bg-sustain.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+
+	@media
+	(-webkit-min-device-pixel-ratio: 2),
+	(min-resolution: 192dpi){
+		.bg-ces {
+			background-image: url('../img/bg-header/bg-ces-2x.jpg');
+		}
+		.bg-bienes {
+			background-image: url('../img/bg-header/bg-bienes-2x.jpg');
+		}
+	    .bg-join {
+			background-image: url('../img/bg-header/bg-join-2x.jpg');
+		}
+
+		.bg-agreement {
+			background-image: url('../img/bg-header/bg-agreement-2x.jpg');
+		}
+
+		.bg-contact {
+			background-image: url('../img/bg-header/bg-contact-2x.jpg');
+		}
+
+		.bg-credit {
+			background-image: url('../img/bg-header/bg-credit-2x.jpg');
+		}
+
+		.bg-entrep {
+			background-image: url('../img/bg-header/bg-entrep-2x.jpg');
+		}
+
+		.bg-faq {
+			background-image: url('../img/bg-header/bg-faq-2x.jpg');
+		}
+
+		.bg-invest {
+			background-image: url('../img/bg-header/bg-invest-2x.jpg');
+		}
+
+		.bg-about {
+			background-image: url('../img/bg-header/bg-about-2x.jpg');
+		}
+
+		.bg-insurance-accidents {
+			background-image: url('../img/bg-header/bg-insurance-accidents-2x.jpg');
+		}
+
+		.bg-insurance-student {
+			background-image: url('../img/bg-header/bg-insurance-student-2x.jpg');
+		}
+
+		.bg-insurance-health {
+			background-image: url('../img/bg-header/bg-insurance-health-2x.jpg');
+		}
+
+		.bg-services {
+			background-image: url('../img/bg-header/bg-services-2x.jpg');
+		}
+
+		.bg-sustain {
+			background-image: url('../img/bg-header/bg-sustain-2x.jpg');
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+		}
+
+		.bg-digital {
+			background-image: url('../img/bg-header/bg-digital-2x.jpg');
+		}
+
+		.bg-insurance {
+			background-image: url('../img/bg-header/bg-insurance-2x.jpg');
+		}
+
+		.bg-news {
+			background-image: url('../img/bg-header/bg-news-2x.jpg');
+		}
+		.bg-other {
+			background-image: url('../img/bg-header/bg-other-2x.jpg');
+		}
+		.bg-savings {
+			background-image: url('../img/bg-header/bg-savings-2x.jpg');
+		}
+	}
+}
+

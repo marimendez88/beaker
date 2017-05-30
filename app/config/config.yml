@@ -1,0 +1,217 @@
+imports:
+    - { resource: parameters.yml }
+    - { resource: security.yml }
+    - { resource: services.yml }
+    - { resource: @LumenAppBundle/Resources/config/services.yml }
+    - { resource: sonata.yml }
+
+# Put parameters here that don't need to change on each machine where the app is deployed
+# http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
+parameters:
+    locale: en
+
+framework:
+    #esi:             ~
+    translator:      { fallbacks: ["%locale%"] }
+    secret:          "%secret%"
+    router:
+        resource: "%kernel.root_dir%/config/routing.yml"
+        strict_requirements: ~
+    form:            ~
+    csrf_protection: ~
+    validation:      { enable_annotations: true }
+    #serializer:      { enable_annotations: true }
+    templating:
+        engines: ['twig']
+        #assets_version: SomeVersionScheme
+    default_locale:  "%locale%"
+    trusted_hosts:   ~
+    trusted_proxies: ~
+    session:
+        # handler_id set to null will use default session handler from php.ini
+        handler_id:  ~
+    fragments:       ~
+    http_method_override: true
+
+# Twig Configuration
+twig:
+    debug:            "%kernel.debug%"
+    strict_variables: "%kernel.debug%"
+    form:
+        resources:
+            # This uses the default - you can put your own one here
+#            - 'LumenAppBundle:Admin:field_image_custom.html.twig'
+
+# Doctrine Configuration
+doctrine:
+    dbal:
+        driver:   pdo_mysql
+        host:     "%database_host%"
+        port:     "%database_port%"
+        dbname:   "%database_name%"
+        user:     "%database_user%"
+        password: "%database_password%"
+        charset:  UTF8
+        types:
+            json: Sonata\Doctrine\Types\JsonType
+        mapping_types:
+            enum:       string
+        # if using pdo_sqlite as your database driver:
+        #   1. add the path in parameters.yml
+        #     e.g. database_path: "%kernel.root_dir%/data/data.db3"
+        #   2. Uncomment database_path in parameters.yml.dist
+        #   3. Uncomment next line:
+        #     path:     "%database_path%"
+
+    orm:
+        auto_generate_proxy_classes: "%kernel.debug%"
+        naming_strategy: doctrine.orm.naming_strategy.underscore
+        auto_mapping: true
+
+# Swiftmailer Configuration
+swiftmailer:
+    transport: "%mailer_transport%"
+    host:      "%mailer_host%"
+    username:  "%mailer_user%"
+    password:  "%mailer_password%"
+    spool:     { type: memory }
+
+fos_user:
+    db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
+    firewall_name: main
+    user_class: Application\Sonata\UserBundle\Entity\User #Lumen\UserBundle\Entity\User
+    #registration:
+    #    form:
+    #        type: lumen_user_registration
+    group:
+        group_class: Application\Sonata\UserBundle\Entity\Group
+
+stof_doctrine_extensions:
+    default_locale: en
+    translation_fallback: true
+    orm:
+        default:
+            timestampable: true
+            softdeleteable: true
+            translatable: true
+
+sonata_block:
+    default_contexts: [cms]
+    blocks:
+        # Enable the SonataAdminBundle block
+        sonata.admin.block.admin_list:
+            contexts:   [admin]
+        sonata.user.block.menu: ~
+        sonata.user.block.account: ~
+        sonata.admin.block.search_result:
+            contexts: [admin]
+
+
+sonata_user:
+    security_acl: true
+    manager_type: orm
+    admin:                  # Admin Classes
+        user:
+            controller:     ApplicationSonataUserBundle:UserAdmin
+
+
+#parameters:
+#    sonata.user.admin.user.class: Application\Sonata\UserBundle\Admin\UserAdmin
+
+#fm_elfinder:
+#    #assets_path: / # default is /assets, this is where css/js elfinder files are
+#    instances:
+#        default:
+#            locale: %locale% # defaults to current request locale
+#            editor: ckeditor # other options are tinymce, tinymce4, fm_tinymce, form, simple, custom
+#            #editor_template: custom template for your editor # default null
+#            #path_prefix: / # for setting custom assets path prefix, useful for non vhost configurations, i.e. http://127.0.0.1/mysite/
+#            #fullscreen: true|false # default is true, applies to simple and ckeditor editors
+#            #theme: smoothness # jquery theme, default is 'smoothness'
+#            include_assets: true # disable if you want to manage loading of javascript and css assets manually
+#            #visible_mime_types: ['image/png', 'image/jpg', 'image/jpeg'] # only show these mime types, defaults to show all
+#            connector:
+#                #debug: true|false # defaults to false
+#                roots:       # at least one root must be defined, defines root filemanager directories
+#                    uploads:
+#                        #show_hidden: true|false # defaults to false, hides dotfiles
+#                        driver: LocalFileSystem
+#                        path: uploads
+#                        upload_allow: ['image/png', 'image/jpg', 'image/jpeg']
+#                        upload_deny: ['all']
+#                        upload_max_size: 2M # also file upload sizes restricted in php.ini
+#                        #attributes: example of setting attributes permission
+#                        #    - { pattern: '/(.*?)/', read: true, write: false, locked: true }
+
+fos_rest:
+    routing_loader:
+        default_format: json
+    param_fetcher_listener: true
+    body_listener: true
+    format_listener: true
+    view:
+        view_response_listener: True
+    service:
+        serializer:     jms_serializer.serializer
+    serializer:
+        serialize_null: true
+
+jms_serializer:
+    handlers:
+        datetime:
+            default_format: "Y-m-d H:i:s"
+    metadata:
+        auto_detection: true
+
+sensio_framework_extra:
+   view:    { annotations: false }
+   router:  { annotations: true }
+
+nelmio_cors:
+    defaults:
+        allow_credentials: false
+        allow_origin: ['*']
+        allow_headers: []
+        allow_methods: []
+        expose_headers: []
+        max_age: 0
+        hosts: []
+    paths:
+        '^/':
+            allow_origin: ['*']
+            allow_headers: ['X-WSSE', 'Authorization']
+            allow_methods: ['POST', 'PUT', 'GET', 'DELETE']
+        '^/api/':
+                    allow_origin: ['*']
+                    allow_headers: ['X-WSSE', 'Authorization']
+                    allow_methods: ['POST', 'PUT', 'GET', 'DELETE']
+
+elao_error_notifier:
+    from: lumendev@lumenup.com
+    to:
+    handle404: false # default :  false
+    #mailer: your.mailer.id # default : mailer
+    handlePHPErrors: true # catch fatal erros and email them
+    handlePHPWarnings: false # catch warnings and email them
+    ignoredClasses: ~
+
+#ivory_ck_editor:
+#    configs:
+#        my_config:
+#            filebrowserBrowseRoute: elfinder
+#            filebrowserBrowseRouteParameters: []
+#            toolbar: [ ["Source", "-", "Save"], "/", ["Anchor"], "/", ["Maximize"] ]
+#            uiColor:                "#000000"
+##            filebrowserUploadRoute: "uploads"
+#            extraPlugins:           "wordcount"
+#            # ...
+
+#comur_image:
+#    config:
+#        cropped_image_dir: 'cropped'
+#        thumbs_dir: 'thumbnails'
+#        media_lib_thumb_size: 150
+#        web_dirname: 'web'
+#        translation_domain: 'ComurImageBundle'
+#        gallery_thumb_size: 150
+#        gallery_dir: 'gallery'

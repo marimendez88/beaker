@@ -1,0 +1,17 @@
+sonata_admin:
+    title:      'Base Symfony 2.8.13'
+    title_logo: /img/logotype/logo.png
+    templates:
+        # default global templates
+        layout:  SonataAdminBundle::layout.html.twig
+    dashboard:
+        blocks:
+            # display a dashboard block
+            - { position: left, type: sonata.admin.block.admin_list }
+        groups:
+            User:
+                label: Users
+                items:
+                    - sonata.user.admin.user
+                    #- sonata.user.admin.group
+                roles: [ROLE_SUPER_ADMIN]
