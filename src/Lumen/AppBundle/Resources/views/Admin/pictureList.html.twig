@@ -1,7 +1,0 @@
-{% extends 'SonataAdminBundle:CRUD:base_list_field.html.twig' %}
-
-{% block field %}
-    <div>
-        <img alt="Imagen" src="{{ object.getRealPath() | default('') }}{{ object.getRealPathImage() | default('') }}" width="150px"/>
-    </div>
-{% endblock %}
