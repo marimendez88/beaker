@@ -1,4 +1,4 @@
-# My project's README
+Beaker
 
 Integrantes del grupo:
 Rita Robles Loaiza (roblesloaiza)
