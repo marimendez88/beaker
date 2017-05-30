@@ -23,3 +23,5 @@ node_modules
 .idea/
 web/.htaccess
 .idea/beaker.iml
+
+.idea/workspace.xml
