@@ -24,7 +24,10 @@ $(document).ready(function () {
         if( $('#registerForm').valid() ) {
             var Usuario = {};
             Usuario.nombre_completo = $('#name').val();
+            Usuario.apellido = $('#lastname').val();
+            //PHONE
             Usuario.email = $('#email').val();
+            //Company
             Usuario.password = $('#password').val();
             RegistroDeUsuario(Usuario);
         }
