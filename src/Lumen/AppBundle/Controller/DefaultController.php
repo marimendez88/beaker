@@ -24,4 +24,16 @@ class DefaultController extends Controller
     }
 
 
+    /**
+     * @Route("/register", name="register")
+     * @Template()
+     */
+    public
+    function registerAction()
+    {
+
+        return array();
+    }
+
+
 }
