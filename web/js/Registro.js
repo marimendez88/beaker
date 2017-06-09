@@ -22,13 +22,13 @@ $(document).ready(function () {
 
     $('body').on('click', '#btnRegistro', function () {
         if( $('#registerForm').valid() ) {
-            var Usuario = {};
-            Usuario.nombre_completo = $('#name').val();
-            Usuario.apellido = $('#lastname').val();
-            //PHONE
-            Usuario.email = $('#email').val();
-            //Company
-            Usuario.password = $('#password').val();
+            var usuario = {};
+            usuario.nombre = $('#name').val();
+            usuario.apellido = $('#lastname').val();
+            usuario.phone = $('#phone').val();
+            usuario.email = $('#email').val();
+            usuario.company = $('#company').val()
+            usuario.password = $('#password').val();
             RegistroDeUsuario(Usuario);
         }
     });
@@ -42,7 +42,7 @@ function RegistroDeUsuario(Usuario) {
         data: {data: Usuario},
         success: function (resultData) {
             if(resultData.status == 'OK'){
-                window.location.replace("/app.php/nise");
+                window.location.replace("/app.php/cdashboard");
             } else {
                 $('#registerModal .title').html(resultData.error);
                 $('#registerModal').modal('show');
