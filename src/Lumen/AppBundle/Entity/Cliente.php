@@ -51,7 +51,7 @@ class Cliente
 
 
     /**
-     * @ORM\ManyToOne(targetEntity="Lumen\AppBundle\Entity\Empresa", inversedBy="Empresa")
+     * @ORM\ManyToOne(targetEntity="Lumen\AppBundle\Entity\Empresa", inversedBy="cliente")
      * @ORM\JoinColumn(name="id_empresa", referencedColumnName="id")
      */
     private $empresa;
@@ -205,7 +205,7 @@ class Cliente
      *
      * @return Cliente
      */
-    public function setEmpresa(\Lumen\AppBundle\Entity\Empresa $empresa = null)
+    public function setEmpresa(\Lumen\AppBundle\Entity\Empresa $empresa )
     {
         $this->empresa = $empresa;
 

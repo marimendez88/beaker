@@ -1,11 +1,20 @@
 lumen_app:
-    resource: "@LumenAppBundle/Controller/"
+    resource: "@LumenAppBundle/Controller/DefaultController.php"
     type:     annotation
     prefix:   /
     defaults:
         _locale: es
     requirements:
         _locale: en|es
+
+cliente_app:
+    resource: "@LumenAppBundle/Controller/ClienteController.php"
+    type:     annotation
+    prefix:   /cliente
+    defaults:
+        _locale: es
+    requirements:
+         _locale: en|es
 
 
 #rest:

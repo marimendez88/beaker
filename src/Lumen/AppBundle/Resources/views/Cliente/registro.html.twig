@@ -1,0 +1,67 @@
+{% extends "::base.html.twig" %}
+
+{% block title %} Registro{% endblock %}
+
+{% block body %}
+<div class="container">
+
+    <h2 class="title"><a href="{{ path('index') }}" class=""><span class=""></span></a>
+        Registro</h2>
+
+    <div class="">
+        <form id="registerForm" novalidate>
+            <div class="">
+                <input class="input" type="text" name="name" id="name" placeholder="Nombre" required>
+            </div>
+            <div class="">
+                <input class="input" type="text" name="lastname" id="lastname" placeholder="Primer Apellido" required>
+            </div>
+            <div class="">
+                <input class="input" type="text" name="phone" id="phone" placeholder="Telefono" required>
+            </div>
+            <div class="">
+                <input class="input" type="email" name="email" id="email" placeholder="Correo electrónico" required>
+            </div>
+            <div class="">
+                <select id="company" name="company" class="" data-placeholder="* Empresa" required>
+                    <option></option>
+                    <option value=1>AyA</option>
+                    <option value=2>TEC</option>
+                    <option value="3">Ortifruti</option>
+                    <option value="4">Sabores</option>
+                </select>
+            </div>
+            <div class="">
+                <input class="input js-password" type="password" name="password" id="password"
+                       placeholder="Contraseña (Al menos 6 caracteres)" required>
+            </div>
+            <div class="">
+                <input type="checkbox" name="showPass" id="showPass" class="checkbox js-show-pass">
+                <label for="showPass">Mostrar contraseña</label>
+            </div>
+            <button type="button" class="btn btn--green" id="btnRegistro">Ingresar</button>
+        </form>
+    </div>
+    <hr>
+    <div class="form-container">
+        <button type="button" class="btn btn--facebook" onclick="fb_login();"><span
+                    class="mdi mdi-facebook-box"></span> Ingresar con
+            facebook
+        </button>
+    </div>
+</div>
+
+
+<div class="modal fade" id="registerModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal__content">
+            <div class="modal__body">
+                <h2 class="title text-center"></h2>
+                <button type="button" data-dismiss="modal" class="btn btn--green">Aceptar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/js/Registro.js" async defer></script>
+
+{% endblock %}

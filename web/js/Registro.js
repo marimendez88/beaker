@@ -23,28 +23,28 @@ $(document).ready(function () {
     $('body').on('click', '#btnRegistro', function () {
         if( $('#registerForm').valid() ) {
             var usuario = {};
-            usuario.nombre = $('#name').val();
-            usuario.apellido = $('#lastname').val();
+            usuario.name = $('#name').val();
+            usuario.lastname = $('#lastname').val();
             usuario.phone = $('#phone').val();
             usuario.email = $('#email').val();
             usuario.company = $('#company').val()
             usuario.password = $('#password').val();
-            RegistroDeUsuario(Usuario);
+            RegistroDeUsuario(usuario);
         }
     });
 
 });
 
-function RegistroDeUsuario(Usuario) {
+function RegistroDeUsuario(usuario) {
     $.ajax({
         type: 'POST',
-        url: '/app.php/registrar/usuario',
-        data: {data: Usuario},
+        url: '/app_dev.php/cliente/registrar/usuario',
+        data: {data: usuario},
         success: function (resultData) {
             if(resultData.status == 'OK'){
-                window.location.replace("/app.php/cdashboard");
+                window.location.replace("/app_dev.php/cliente/dashboard");
             } else {
-                $('#registerModal .title').html(resultData.error);
+                $('#registerModal .title').html(error);
                 $('#registerModal').modal('show');
             }
         }

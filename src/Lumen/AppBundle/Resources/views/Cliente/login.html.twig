@@ -1,0 +1,30 @@
+{% extends "::base.html.twig" %}
+
+{% block title %} Login{% endblock %}
+
+{% block body %}
+
+
+   <div class="container login">
+
+        <h2 class="title"><a href="#" class=""><span class=""></span></a>
+            Ingreso</h2>
+
+        <div class="form-container">
+            {{ form_start(form, {attr: { 'id' : 'loginForm', 'novalidate': 'novalidate'} } ) }}
+            <div class="input-field">
+                {{ form_widget(form.email, {'attr' : { 'placeholder' : 'Correo electrónico', 'autocomplete' : 'off', 'class' : 'input', 'required':'required'  } } ) }}
+                {{ form_errors(form.email) }}
+            </div>
+            <div class="input-field">
+                {{ form_widget(form.clave, {'attr' : { 'placeholder' : 'Contraseña (al menos 6 caracteres)' , 'class' : 'input js-password', 'required':'required' } } ) }}
+                {{ form_errors(form.clave, {'attr' : {'class':'error'}}) }}
+            </div>
+            <button type="submit" class="btn btn--green">Ingresar</button>
+            {{ form_end(form) }}
+        </div>
+        <hr>
+    </div>
+
+
+{% endblock %}

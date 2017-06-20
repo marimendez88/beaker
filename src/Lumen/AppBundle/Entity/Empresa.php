@@ -52,7 +52,7 @@ class Empresa
 
 
     /**
-     * @ORM\OneToMany(targetEntity="Lumen\AppBundle\Entity\Cliente", mappedBy="cliente")
+     * @ORM\OneToMany(targetEntity="Lumen\AppBundle\Entity\Cliente", mappedBy="empresa")
      *
      */
     private $cliente;
