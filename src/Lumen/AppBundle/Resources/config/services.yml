@@ -5,3 +5,44 @@ services:
 #        tags:
 #            - {name: sonata.admin, manager_type: orm, group: Usuario, label: Usuario}
 #
+    lumen_app.admin.categoria_servicios:
+        class: Lumen\AppBundle\Admin\CategoriaServiciosAdmin
+        arguments: [~, Lumen\AppBundle\Entity\CategoriaServicios, SonataAdminBundle:CRUD]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: admin, label: CategoriaServicios }
+
+    lumen_app.admin.servicios:
+        class: Lumen\AppBundle\Admin\ServiciosAdmin
+        arguments: [~, Lumen\AppBundle\Entity\Servicios, SonataAdminBundle:CRUD]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: admin, label: Servicios }
+
+    lumen_app.admin.muestra:
+        class: Lumen\AppBundle\Admin\MuestraAdmin
+        arguments: [~, Lumen\AppBundle\Entity\Muestra, SonataAdminBundle:CRUD]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: admin, label: Muestra }
+
+    lumen_app.admin.solicitudes:
+        class: Lumen\AppBundle\Admin\SolicitudesAdmin
+        arguments: [~, Lumen\AppBundle\Entity\Solicitudes, SonataAdminBundle:CRUD]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: admin, label: Solicitudes }
+
+    lumen_app.admin.tipo_muestra:
+        class: Lumen\AppBundle\Admin\TipoMuestraAdmin
+        arguments: [~, Lumen\AppBundle\Entity\TipoMuestra, SonataAdminBundle:CRUD]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: admin, label: TipoMuestra }
+
+    lumen_app.admin.cliente:
+        class: Lumen\AppBundle\Admin\ClienteAdmin
+        arguments: [~, Lumen\AppBundle\Entity\Cliente, SonataAdminBundle:CRUD]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: admin, label: Cliente }
+
+    lumen_app.admin.empresa:
+        class: Lumen\AppBundle\Admin\EmpresaAdmin
+        arguments: [~, Lumen\AppBundle\Entity\Empresa, SonataAdminBundle:CRUD]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: admin, label: Empresa }
