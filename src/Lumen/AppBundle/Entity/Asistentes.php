@@ -5,27 +5,22 @@ namespace Lumen\AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Cliente
+ * Asistentes
  *
- * @ORM\Table(name="Cliente")
- * @ORM\Entity
+ * @ORM\Table(name="asistentes")
+ * @ORM\Entity(repositoryClass="Lumen\AppBundle\Repository\AsistentesRepository")
  */
-class Cliente
+class Asistentes
 {
     /**
-     * @var integer
+     * @var int
      *
-     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Column(name="id", type="integer")
      * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
+     * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="nombre", type="string", length=100, nullable=false)
-     */
     private $nombre;
 
     /**
@@ -50,12 +45,6 @@ class Cliente
     private $email;
 
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="empresa", type="string", length=100, nullable=true)
-     */
-    private $empresa;
 
     /**
      * @var string
@@ -65,11 +54,14 @@ class Cliente
     private $clave;
 
 
+
+
     /**
-     * @ORM\OneToMany(targetEntity="Lumen\AppBundle\Entity\SolicitudDeServicios", mappedBy="cliente")
-     *
+     * @ORM\ManyToOne(targetEntity="TipoAsistentes", inversedBy="asistente")
+     * @ORM\JoinColumn(name="id_tipoAsistentes", referencedColumnName="id")
      */
-    private $solicitud;
+    private $tipoAsistente;
+
 
 
 
@@ -206,51 +198,30 @@ class Cliente
 
 
 
+
     /**
-     * Set empresa
+     * Set tipoAsistente
      *
-     * @param \Lumen\AppBundle\Entity\Empresa $empresa
+     * @param \Lumen\AppBundle\Entity\TipoAsistentes $tipoAsistente
      *
-     * @return Cliente
+     * @return Asistentes
      */
-    public function setEmpresa(\Lumen\AppBundle\Entity\Empresa $empresa )
+    public function setTipoAsistentes($tipoAsistente)
     {
-        $this->empresa = $empresa;
+        $this->tipoAsistente = $tipoAsistente;
 
         return $this;
     }
 
     /**
-     * Get empresa
+     * Get tipoAsistente
      *
-     * @return \Lumen\AppBundle\Entity\Empresa
+     * @return \Lumen\AppBundle\Entity\TipoAsistentes
      */
-    public function getEmpresa()
+    public function getTipoAsistentes()
     {
-        return $this->empresa;
+        return $this->tipoAsistente;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getSolicitud()
-    {
-        return $this->solicitud;
-    }
 
-    /**
-     * @return mixed
-     */
-    public function getSolicitudToArray()
-    {
-        return $this->solicitud->toArray();
-    }
-
-    /**
-     * @param mixed $solicitud
-     */
-    public function setSolicitud($solicitud)
-    {
-        $this->solicitud = $solicitud;
-    }
 }

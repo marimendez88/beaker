@@ -5,35 +5,6 @@ services:
 #        tags:
 #            - {name: sonata.admin, manager_type: orm, group: Usuario, label: Usuario}
 #
-    lumen_app.admin.categoria_servicios:
-        class: Lumen\AppBundle\Admin\CategoriaServiciosAdmin
-        arguments: [~, Lumen\AppBundle\Entity\CategoriaServicios, SonataAdminBundle:CRUD]
-        tags:
-            - { name: sonata.admin, manager_type: orm, group: admin, label: CategoriaServicios }
-
-    lumen_app.admin.servicios:
-        class: Lumen\AppBundle\Admin\ServiciosAdmin
-        arguments: [~, Lumen\AppBundle\Entity\Servicios, SonataAdminBundle:CRUD]
-        tags:
-            - { name: sonata.admin, manager_type: orm, group: admin, label: Servicios }
-
-    lumen_app.admin.muestra:
-        class: Lumen\AppBundle\Admin\MuestraAdmin
-        arguments: [~, Lumen\AppBundle\Entity\Muestra, SonataAdminBundle:CRUD]
-        tags:
-            - { name: sonata.admin, manager_type: orm, group: admin, label: Muestra }
-
-    lumen_app.admin.solicitudes:
-        class: Lumen\AppBundle\Admin\SolicitudesAdmin
-        arguments: [~, Lumen\AppBundle\Entity\Solicitudes, SonataAdminBundle:CRUD]
-        tags:
-            - { name: sonata.admin, manager_type: orm, group: admin, label: Solicitudes }
-
-    lumen_app.admin.tipo_muestra:
-        class: Lumen\AppBundle\Admin\TipoMuestraAdmin
-        arguments: [~, Lumen\AppBundle\Entity\TipoMuestra, SonataAdminBundle:CRUD]
-        tags:
-            - { name: sonata.admin, manager_type: orm, group: admin, label: TipoMuestra }
 
     lumen_app.admin.cliente:
         class: Lumen\AppBundle\Admin\ClienteAdmin
@@ -41,8 +12,38 @@ services:
         tags:
             - { name: sonata.admin, manager_type: orm, group: admin, label: Cliente }
 
-    lumen_app.admin.empresa:
-        class: Lumen\AppBundle\Admin\EmpresaAdmin
-        arguments: [~, Lumen\AppBundle\Entity\Empresa, SonataAdminBundle:CRUD]
+    lumen_app.admin.asistentes:
+        class: Lumen\AppBundle\Admin\AsistentesAdmin
+        arguments: [~, Lumen\AppBundle\Entity\Asistentes, SonataAdminBundle:CRUD]
         tags:
-            - { name: sonata.admin, manager_type: orm, group: admin, label: Empresa }
+            - { name: sonata.admin, manager_type: orm, group: admin, label: Asistentes }
+
+    lumen_app.admin.tipo_asistentes:
+        class: Lumen\AppBundle\Admin\TipoAsistentesAdmin
+        arguments: [~, Lumen\AppBundle\Entity\TipoAsistentes, SonataAdminBundle:CRUD]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: admin, label: TipoAsistentes }
+
+    lumen_app.admin.categoria_analisis:
+        class: Lumen\AppBundle\Admin\CategoriaAnalisisAdmin
+        arguments: [~, Lumen\AppBundle\Entity\CategoriaAnalisis, SonataAdminBundle:CRUD]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: admin, label: CategoriaAnalisis }
+
+    lumen_app.admin.analisis:
+        class: Lumen\AppBundle\Admin\AnalisisAdmin
+        arguments: [~, Lumen\AppBundle\Entity\Analisis, SonataAdminBundle:CRUD]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: admin, label: Analisis }
+
+    lumen_app.admin.muestra:
+        class: Lumen\AppBundle\Admin\MuestraAdmin
+        arguments: [~, Lumen\AppBundle\Entity\Muestra, SonataAdminBundle:CRUD]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: admin, label: Muestra }
+
+    lumen_app.admin.detalle_muestra:
+        class: Lumen\AppBundle\Admin\DetalleMuestraAdmin
+        arguments: [~, Lumen\AppBundle\Entity\DetalleMuestra, SonataAdminBundle:CRUD]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: admin, label: DetalleMuestra }

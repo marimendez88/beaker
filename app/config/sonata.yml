@@ -19,15 +19,22 @@ sonata_admin:
             Administrativo:
                 label: Administrativo
                 items:
-                    - lumen_app.admin.categoria_servicios
-                    - lumen_app.admin.servicios
-                    - lumen_app.admin.muestra
-                    - lumen_app.admin.solicitudes
-                    - lumen_app.admin.tipo_muestra
-                    - lumen_app.admin.cliente
-                    - lumen_app.admin.empresa
+                     - lumen_app.admin.cliente
+                     - lumen_app.admin.categoria_analisis
+                     - lumen_app.admin.analisis
+                     - lumen_app.admin.muestra
+                     - lumen_app.admin.detalle_muestra
                     #- sonata.user.admin.group
                 roles: [ROLE_SUPER_ADMIN]
+            Asistentes:
+                 label: Asistentes
+                 items:
+                      - lumen_app.admin.tipo_asistentes
+                      - lumen_app.admin.asistentes
+                      -
+
+                 roles: [ROLE_SUPER_ADMIN]
+
 
 
 
