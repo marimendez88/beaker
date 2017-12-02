@@ -73,3 +73,15 @@ sonata_user_admin_security:
 sonata_user_admin_resetting:
     resource: '@SonataUserBundle/Resources/config/routing/admin_resetting.xml'
     prefix: /admin/resetting
+
+lumen_app_bundle_index:
+    path:      /index
+    defaults:  { _controller: LumenAppBundle:Default:index }
+
+lumen_app_bundle_login:
+    path:      /login
+    defaults:  { _controller: LumenAppBundle:Default:login }
+
+lumen_app_bundle_registro:
+    path:      /registro
+    defaults:  { _controller: LumenAppBundle:Default:registro }
