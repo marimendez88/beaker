@@ -167,7 +167,7 @@ button#showRightPush img {
 /*-- //effect --*/
 /*--header-banner--*/
 .banner {
-	background: url(../images/banner.jpg) no-repeat 0px 0px;
+	background: url(../img/banner.jpg) no-repeat 0px 0px;
 	background-size: cover;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -176,7 +176,7 @@ button#showRightPush img {
 	position: relative;
 }
 .banner-1 {
-	background: url(../images/banner.jpg) no-repeat 0px 0px;
+	background: url(../img/banner.jpg) no-repeat 0px 0px;
 	background-size: cover;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -246,7 +246,7 @@ button#showRightPush img {
 }
 /*------------------ Slider Part starts Here----------*/
 .slider{
-	background:url(../images/slide-banner.jpg)no-repeat;
+	background:url(../img/banner.jpg)no-repeat;
 	background-size: cover;
 	-webkit-background-size: cover;
 	-o-background-size: cover;
@@ -766,7 +766,7 @@ a.play-icon span {
 /*--end-posting--*/
 /*--start-price--*/
 .price{
-	background: url(../images/price-banner.jpg) no-repeat 0px 0px;
+	background: url(../img/banner.jpg) no-repeat 0px 0px;
 	background-size: cover;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
