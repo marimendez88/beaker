@@ -79,9 +79,9 @@ lumen_app_bundle_index:
     defaults:  { _controller: LumenAppBundle:Default:index }
 
 lumen_app_bundle_login:
-    path:      /login
+    path:      /loginInicio
     defaults:  { _controller: LumenAppBundle:Default:login }
 
 lumen_app_bundle_registro:
-    path:      /registro
+    path:      /registroInicio
     defaults:  { _controller: LumenAppBundle:Default:registro }

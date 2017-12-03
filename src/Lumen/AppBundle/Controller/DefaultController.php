@@ -39,7 +39,7 @@ class DefaultController extends Controller
   public function registroAction()
   {
 
-    return $this->render('LumenAppBundle:Cliente:loginInicio.html.twig');
+    return $this->render('LumenAppBundle:Cliente:registroInicio.html.twig');
 
   }
 
