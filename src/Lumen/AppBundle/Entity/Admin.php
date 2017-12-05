@@ -5,12 +5,12 @@ namespace Lumen\AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Cliente
+ * Admin
  *
- * @ORM\Table(name="Cliente")
- * @ORM\Entity
+ * @ORM\Table(name="admin")
+ * @ORM\Entity(repositoryClass="Lumen\AppBundle\Repository\AdminRepository")
  */
-class Cliente
+class Admin
 {
     /**
      * @var integer
@@ -49,6 +49,14 @@ class Cliente
      */
     private $email;
 
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="empresa", type="string", length=100, nullable=true)
+     */
+    private $empresa;
+
     /**
      * @var string
      *
@@ -56,18 +64,13 @@ class Cliente
      */
     private $clave;
 
+
     /**
      * @ORM\OneToMany(targetEntity="Lumen\AppBundle\Entity\SolicitudDeServicios", mappedBy="cliente")
      *
      */
     private $solicitud;
 
-
-    /**
-     * @ORM\ManyToOne(targetEntity="Lumen\AppBundle\Entity\Roles", inversedBy="cliente")
-     * @ORM\JoinColumn(name="id_cliente", referencedColumnName="id")
-     */
-    private $rol;
 
 
     /**
@@ -203,7 +206,29 @@ class Cliente
 
 
 
+    /**
+     * Set empresa
+     *
+     * @param \Lumen\AppBundle\Entity\Empresa $empresa
+     *
+     * @return Cliente
+     */
+    public function setEmpresa(\Lumen\AppBundle\Entity\Empresa $empresa )
+    {
+        $this->empresa = $empresa;
 
+        return $this;
+    }
+
+    /**
+     * Get empresa
+     *
+     * @return \Lumen\AppBundle\Entity\Empresa
+     */
+    public function getEmpresa()
+    {
+        return $this->empresa;
+    }
 
     /**
      * @return mixed
@@ -229,3 +254,4 @@ class Cliente
         $this->solicitud = $solicitud;
     }
 }
+
