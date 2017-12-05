@@ -41,6 +41,12 @@ class Analisis
      */
     private $detalleMuestra;
 
+    /**
+     * @ORM\OneToMany(targetEntity="Lumen\AppBundle\Entity\SolicitudDeServicios", mappedBy="analisis")
+     *
+     */
+    private $solicitud;
+
 
     /**
      * Get id
