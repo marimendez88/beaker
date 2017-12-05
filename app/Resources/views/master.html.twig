@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Beaker</title>
+{% block title %} <title>Beaker</title>{% endblock %}
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
@@ -34,12 +35,12 @@
   <div class="subnavbar-inner">
     <div class="container">
       <ul class="mainnav">
-        <li class="active"><a href="index.html"><i class="icon-dashboard"></i><span>Nueva Solicitud de Servicios</span> </a> </li>
-        <li><a href=""><i class="icon-comment"></i><span>Solicitud de Cotización</span> </a> </li>
+        <li class="active"><a href="index.html"><i class="fa fa-dashboard"></i><span>Nueva Solicitud de Servicios</span> </a> </li>
+        <li><a href=""><i class="fa fa-file-o"></i><span>Solicitud de Cotización</span> </a> </li>
         {#<li><a href=""><i class=" icon-user"></i><span>Conteo Horas Asistente</span> </a></li>#}
         {#<li><a href=""><i class="icon-bar-chart"></i><span>Reportes Pendientes de Envío</span> </a> </li>#}
         {#<li><a href=""><i class=" icon-calendar"></i><span>Calendario de MuestraAdmintreos</span> </a> </li>#}
-        <li><a href=""><i class=" icon-signout"></i><span>Salir</span> </a> </li>
+        <li><a href=""><i class="fa fa-sign-out"></i><span>Salir</span> </a> </li>
       </ul>
     </div>
     <!-- /container --> s
