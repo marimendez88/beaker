@@ -82,6 +82,10 @@ lumen_app_bundle_login:
     path:      /cliente/loginInicio
     defaults:  { _controller: LumenAppBundle:Cliente:loginc }
 
+lumen_app_bundle_logout:
+    path:      /cliente/logout
+    defaults:  { _controller: LumenAppBundle:Cliente:logout }
+
 lumen_app_bundle_registro:
     path:      /cliente/registroInicio
     defaults:  { _controller: LumenAppBundle:Cliente:registro }

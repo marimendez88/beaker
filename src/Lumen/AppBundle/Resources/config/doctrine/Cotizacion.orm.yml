@@ -1,0 +1,33 @@
+Lumen\AppBundle\Entity\Cotizacion:
+    type: entity
+    table: null
+    repositoryClass: Lumen\AppBundle\Repository\CotizacionRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        fecha:
+            type: date
+        nombre:
+            type: string
+            length: 255
+        empresa:
+            type: string
+            length: 255
+        email:
+            type: string
+            length: 255
+            unique: true
+        telefono:
+            type: string
+            length: 255
+        detalleCotizacion:
+            type: text
+            column: detalle_cotizacion
+        estado:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

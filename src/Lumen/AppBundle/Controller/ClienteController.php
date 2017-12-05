@@ -173,7 +173,7 @@ class ClienteController extends Controller
      * @Route("/logout", name="logout")
      * @Template()
      */
-    public function logout(){
+    public function logoutAction(){
 
         $this->get('security.token_storage')->setToken(null);
         $this->get('request')->getSession()->invalidate();
