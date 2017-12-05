@@ -227,6 +227,20 @@ class ClienteController extends Controller
 
     }
 
+    /**
+     * @Route("/getcotizacion", name="getcotizacion")
+     * @Template()
+     */
+    public function getCotizacionAction()
+    {       
+        $em = $this->getDoctrine()->getEntityManager();
+        $cotizaciones = $em->getRepository('LumenAppBundle:Cotizacion')->findAll();
+        
+       
+        return $this->render('LumenAppBundle:Cliente:verCotizaciones.html.twig', array('cotizaciones' => $cotizaciones));
+
+    }
+   
 
 
 

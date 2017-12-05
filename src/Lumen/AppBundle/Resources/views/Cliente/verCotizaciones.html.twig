@@ -1,0 +1,46 @@
+{% extends "::master.html.twig" %}
+
+
+{% block title %} <title>Dashboard</title>{% endblock %}
+
+
+{% block body %}
+ <div class="widget">
+
+         
+            <div class="widget-header"> <i class="icon-bookmark"></i>
+              <h3>Ver cotizaciones</h3>
+            </div>
+          
+
+            <!-- /widget-header -->
+    <div class="widget-content">
+
+           
+        <div class="shortcuts"> 
+            
+             <table class="table table-striped" id="tableInfo">
+                            <thead>
+                                <tr><td scope="col">Empresa</td>
+                                    <td scope="col">Nombre</td>
+                                    <td scope="col">Estado</td>
+                                </tr>
+                            </thead>
+                                {%for cotizacion in cotizaciones%}
+                                <tbody>
+                                <tr><td>{{ cotizacion.getEmpresa() }}</td>
+                                    <td>{{ cotizacion.getNombre() }}</td>
+                                    <td>{{ cotizacion.getEstado() }}</td>
+                                </tr>
+                                </tbody>
+                                   {% endfor %}
+                                
+                            </table>
+             
+        </div>
+
+     </div>
+              <!-- /shortcuts --> 
+
+
+{% endblock %}
