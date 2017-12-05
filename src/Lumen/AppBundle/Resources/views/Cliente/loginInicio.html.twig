@@ -38,14 +38,21 @@
 				<div class="contact-bottom">
 					<h3>Iniciar Sesión</h3>
 					<div class="contact-text">
-						<input type="text" value="Usuario" />
-						<input type="password" value="Contraseña" placeholder="Contraseña" />
+                    {{ form_start(form, {attr: { 'id' : 'loginForm', 'novalidate': 'novalidate'} } ) }}
+					<div class="input-field">
+						{{ form_widget(form.email, {'attr' : { 'placeholder' : 'Correo electrónico', 'autocomplete' : 'off', 'class' : 'input', 'required':'required'  } } ) }}
+                        {{ form_errors(form.email) }}
+					</div>
+					<div class="input-field">
+                        {{ form_widget(form.clave, {'attr' : { 'placeholder' : 'Contraseña ' , 'class' : 'input js-password', 'required':'required' } } ) }}
+                        {{ form_errors(form.clave, {'attr' : {'class':'error'}}) }}
+					</div>
 						<div class="contact-but">
-							<form action="../indexClientes.html">
-						
-								<input type="submit"/>
-							</form>
+					<button type="submit" class="btn btn--green">Ingresar</button>
 						</div>
+                    {{ form_end(form) }}
+					</div>
+
 					</div>
 				</div>
 			</div>

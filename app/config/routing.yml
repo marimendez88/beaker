@@ -80,7 +80,7 @@ lumen_app_bundle_index:
 
 lumen_app_bundle_login:
     path:      /cliente/loginInicio
-    defaults:  { _controller: LumenAppBundle:Cliente:login }
+    defaults:  { _controller: LumenAppBundle:Cliente:loginc }
 
 lumen_app_bundle_registro:
     path:      /cliente/registroInicio
@@ -89,3 +89,4 @@ lumen_app_bundle_registro:
 lumen_app_bundle_indexClient:
     path:      /cliente/index
     defaults:  { _controller: LumenAppBundle:Cliente:indexclient }
+

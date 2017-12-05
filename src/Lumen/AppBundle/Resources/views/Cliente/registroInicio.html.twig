@@ -41,18 +41,16 @@
 				<div class="contact-bottom">
 					<h3>Registro</h3>
 					<div class="contact-text">
-						<input type="text" value="Nombre" />
-						<input type="text" value="Apellido" />
-						<input type="phone" value="Teléfono" />
-						<input type="email" value="Email" />
-						<input type="text" value="Empresa" />
-						<input type="password" value="Contraseña" placeholder="Contraseña" />
-						<div class="contact-but">
-							<form>
-								<input type="submit" value="Registrarse" />
-								<input type="submit" value="Entrar con facebook " />
-							</form>
-						</div>
+                        <form id="registerForm"  action="{{ path('registrarCliente') }}">
+						<input type="text" name="name" id="name" placeholder="Nombre" required/>
+						<input type="text" name="lastname" id="lastname" placeholder="Apellido" required />
+						<input type="text" name="phone" id="phone" placeholder="Teléfono" required />
+						<input type="email" name="email" id="email" placeholder="Email" required />
+						<input type="text" id="company" name="company" placeholder="Empresa" required />
+						<input type="password"  name="password" id="password"s placeholder="Contraseña" required />
+
+                            <button id="btnRegistro">Registrarse</button>
+                        </form>
 					</div>
 				</div>
 			</div>
@@ -66,7 +64,9 @@
 				<p>Beaker 2017</p>
 			</div>
 		</div>
-	</div>	
+	</div>
+
+	<script src="/js/Registro.js" async defer></script>
 	<!--end-footer-->	 
 </body>
 </html>
