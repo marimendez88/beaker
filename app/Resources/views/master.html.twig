@@ -40,7 +40,7 @@
         {#<li><a href=""><i class=" icon-user"></i><span>Conteo Horas Asistente</span> </a></li>#}
         {#<li><a href=""><i class="icon-bar-chart"></i><span>Reportes Pendientes de Envío</span> </a> </li>#}
         {#<li><a href=""><i class=" icon-calendar"></i><span>Calendario de MuestraAdmintreos</span> </a> </li>#}
-        <li><a href="{{path('logout')}}"><i class="fa fa-sign-out"></i><span>Salir</span> </a> </li>
+        <li><a href="{{ path('logout') }}"><i class="fa fa-sign-out"></i><span>Salir</span> </a> </li>
       </ul>
     </div>
     <!-- /container -->
@@ -53,13 +53,14 @@
     <div class="container">
       <div class="row">
         <div class="span12">
+         {% block body %}
           <div class="widget">
 
-          {% block body %}
+         
             <div class="widget-header"> <i class="icon-bookmark"></i>
               <h3>Información Importante</h3>
             </div>
-          {% endblock %}
+          
 
             <!-- /widget-header -->
             <div class="widget-content">
@@ -68,6 +69,7 @@
                  </div>
               <!-- /shortcuts --> 
             </div>
+            {% endblock %}
             <!-- /widget-content --> 
           </div>
      

@@ -5,7 +5,53 @@
 
 
 {% block body %}
+ <div class="widget">
 
+         
+            <div class="widget-header"> <i class="icon-bookmark"></i>
+              <h3>Ingresar cotización</h3>
+            </div>
+          
+
+            <!-- /widget-header -->
+    <div class="widget-content">
+
+           
+        <div class="shortcuts"> 
+            <form name="form1" id="form1" action="{{ path('insertcotizacion')}}" method="post">
+        
+                <label>Fecha:</label>
+                <div class="input-group date">
+                    <div class="input-group-addon">
+                        <i class="fa fa-calendar"></i>
+                    </div>
+                    <input type="text" class="form-control pull-right" id="txtFecha" name="txtFecha">
+                </div>
+
+                <label text-align: left>Nombre</label>
+                <input type="text" class="form-control" id="txtNombre" name="txtNombre" placeholder="Nombre">
+                    <br>
+                <label>Empresa</label>
+                <input type="text" class="form-control" id="txtEmpresa" name="txtEmpresa" placeholder="Empresa">
+                    <br>
+                <label>Email</label>
+                <input type="email" class="form-control" id="txtEmail" name="txtEmail" placeholder="Email">
+                    <br>
+                <label>Teléfono</label>
+                <input type="phone" class="form-control" id="txtTelefono"  name="txtTelefono" placeholder="Teléfono">
+                <label>Detalle Cotización</label>
+                <textarea class="textarea" id ="txtDetalle" name ="txtDetalle" placeholder="Place some text here"
+                    style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+           
+            <input type="submit" value="Enviar cotización" class="btn btn-primary" name="btnAddr" id="btnAdd"/> </input>                                    
+
+            
+            </form>
+             
+        </div>
+
+     </div>
+              <!-- /shortcuts --> 
 
 
 {% endblock %}
