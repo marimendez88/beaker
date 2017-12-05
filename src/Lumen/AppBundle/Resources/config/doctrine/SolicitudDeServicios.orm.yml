@@ -1,0 +1,43 @@
+Lumen\AppBundle\Entity\SolicitudDeServicios:
+    type: entity
+    table: null
+    repositoryClass: Lumen\AppBundle\Repository\SolicitudDeServiciosRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        analisis:
+            type: string
+            length: 255
+        nombre:
+            type: string
+            length: 255
+        fechaIngresoMuestra:
+            type: string
+            length: 255
+        fechaTomaMuestra:
+            type: string
+            length: 255
+        horaTomaMuestra:
+            type: string
+            length: 255
+        pH:
+            type: integer
+        temperatura:
+            type: integer
+        tipoRecipiente:
+            type: string
+            length: 255
+        tipoMuestra:
+            type: string
+            length: 255
+        tipoMuestreo:
+            type: string
+            length: 255
+        observaciones:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }
