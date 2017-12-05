@@ -21,7 +21,7 @@ class ClienteController extends Controller
     public function indexClientAction()
     {
 
-        return $this->render('LumenAppBundle:Cliente:indexc.html.twig');
+        return $this->render('LumenAppBundle:Cliente:index.html.twig');
 
     }
 

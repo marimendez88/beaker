@@ -28,7 +28,7 @@ class DefaultController extends Controller
     public function indexAction()
   {
 
-    return $this->render('LumenAppBundle:Default:indexc.html.twig');
+    return $this->render('LumenAppBundle:Default:index.html.twig');
 
   }
 
