@@ -21,27 +21,18 @@ use Lumen\AppBundle\Form\Login\LoginType;
 class DefaultController extends Controller
 {
 
- 
-  public function indexAction()
+    /**
+     * @Route("/", name="index")
+     * @Template()
+     */
+    public function indexAction()
   {
 
     return $this->render('LumenAppBundle:Cliente:index.html.twig');
 
   }
 
-  public function loginAction()
-  {
 
-    return $this->render('LumenAppBundle:Cliente:loginInicio.html.twig');
-
-  }
-
-  public function registroAction()
-  {
-
-    return $this->render('LumenAppBundle:Cliente:registroInicio.html.twig');
-
-  }
 
 
 

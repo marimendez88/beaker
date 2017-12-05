@@ -15,6 +15,33 @@ use Symfony\Component\HttpFoundation\Session\Session;
 
 class ClienteController extends Controller
 {
+
+
+
+    public function indexClientAction()
+    {
+
+        return $this->render('LumenAppBundle:Cliente:index.html.twig');
+
+    }
+
+    public function loginAction()
+    {
+
+        return $this->render('LumenAppBundle:Cliente:loginInicio.html.twig');
+
+    }
+
+    public function registroAction()
+    {
+
+        return $this->render('LumenAppBundle:Cliente:registroInicio.html.twig');
+
+    }
+
+
+
+
     /**
      * @Route("/main" , name="main" )
      */
@@ -28,15 +55,15 @@ class ClienteController extends Controller
     }
 
 
-    /**
-     * @Route("/registro")
-     */
-    public function registroAction()
-    {
-        return $this->render('LumenAppBundle:Cliente:registro.html.twig', array(
-            // ...
-        ));
-    }
+//    /**
+//     * @Route("/registro")
+//     */
+//    public function registroAction()
+//    {
+//        return $this->render('LumenAppBundle:Cliente:registro.html.twig', array(
+//            // ...
+//        ));
+//    }
     /**
      * @Route("/registrar/usuario", name="registrar_usuario_ajax")
      */
@@ -109,51 +136,51 @@ class ClienteController extends Controller
 
       }
 
-    /**
-     * @Route("/loginaction", name="loginaction")
-     * @Template()
-     */
-    public function loginAction(Request $request)
-    {
-        $em = $this->getDoctrine()->getManager();
-         $cliente = new Cliente();
-                $form = $this->createForm(\Lumen\AppBundle\Form\ClienteType::class, $cliente, array(
-                    'action' => $this->generateUrl('loginaction'),
-                    'method' => 'POST'
-                ));
-            $form->handleRequest($request);
-            $info = $form->getData();
-            $user = $em->getRepository('LumenAppBundle:Cliente')->findBy(array('email' => $info->getEmail()));
-
-            if (!$user){
-                $form->get('email')->addError(new FormError('Correo incorrecto'));
-                $result = array('error' => true, 'form' => $form);
-            }else{
-
-                $client =$user[0];
-                $clave =$client->getClave();
-                $name = $client->getNombre();
-                $result  = [] ;
-                if ($clave != $info->getClave()) {
-                    $form->get('clave')->addError(new FormError('Contraseña Incorrecta'));
-                    $result = array('error' => true, 'form' => $form);
-
-                }else{
-                    $result = array('error' => false, 'form' => $form);
-                }
-            }
-
-        if ($result['error']== true) {
-            return $this->redirect($this->generateUrl('login', array('form' => $form, 'loginError' => true)));
-        }else{
-            /*$session = new Session();
-            $session->start();
-            $session->set('name', $name);
-            $session->get('name');*/
-
-            return $this->redirect($this->generateUrl('dashboard'));
-        }
-    }
+//    /**
+//     * @Route("/loginaction", name="loginaction")
+//     * @Template()
+//     */
+//    public function loginAction(Request $request)
+//    {
+//        $em = $this->getDoctrine()->getManager();
+//         $cliente = new Cliente();
+//                $form = $this->createForm(\Lumen\AppBundle\Form\ClienteType::class, $cliente, array(
+//                    'action' => $this->generateUrl('loginaction'),
+//                    'method' => 'POST'
+//                ));
+//            $form->handleRequest($request);
+//            $info = $form->getData();
+//            $user = $em->getRepository('LumenAppBundle:Cliente')->findBy(array('email' => $info->getEmail()));
+//
+//            if (!$user){
+//                $form->get('email')->addError(new FormError('Correo incorrecto'));
+//                $result = array('error' => true, 'form' => $form);
+//            }else{
+//
+//                $client =$user[0];
+//                $clave =$client->getClave();
+//                $name = $client->getNombre();
+//                $result  = [] ;
+//                if ($clave != $info->getClave()) {
+//                    $form->get('clave')->addError(new FormError('Contraseña Incorrecta'));
+//                    $result = array('error' => true, 'form' => $form);
+//
+//                }else{
+//                    $result = array('error' => false, 'form' => $form);
+//                }
+//            }
+//
+//        if ($result['error']== true) {
+//            return $this->redirect($this->generateUrl('login', array('form' => $form, 'loginError' => true)));
+//        }else{
+//            /*$session = new Session();
+//            $session->start();
+//            $session->set('name', $name);
+//            $session->get('name');*/
+//
+//            return $this->redirect($this->generateUrl('dashboard'));
+//        }
+//    }
 
     /**
      * @Route("/logout", name="logout")
