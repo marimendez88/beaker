@@ -65,7 +65,7 @@ class Cliente
 
     /**
      * @ORM\ManyToOne(targetEntity="Lumen\AppBundle\Entity\Roles", inversedBy="cliente")
-     * @ORM\JoinColumn(name="id_cliente", referencedColumnName="id")
+     * @ORM\JoinColumn(name="id_rol", referencedColumnName="id")
      */
     private $rol;
 
@@ -228,4 +228,38 @@ class Cliente
     {
         $this->solicitud = $solicitud;
     }
+
+
+
+
+
+
+
+    /**
+     * Set rol
+     *
+     * @param \Lumen\AppBundle\Entity\Roles $rol
+     *
+     * @return Cliente
+     */
+    public function setRoles($rol)
+    {
+        $this->rol = $rol;
+
+        return $this;
+    }
+
+    /**
+     * Get rol
+     *
+     * @return \Lumen\AppBundle\Entity\Roles
+     */
+    public function getRoles()
+    {
+        return $this->rol;
+    }
+
+
+
+
 }

@@ -39,7 +39,7 @@ class ClienteController extends Controller
         }
         return $this->render('LumenAppBundle:Cliente:loginInicio.html.twig', array('form' => $form->createView()));
 
-//        return $this->render('LumenAppBundle:Cliente:loginInicio.html.twig');
+//        return $this->render('LumenAppBundle:Cliente:login.html.twig');
 
     }
 
@@ -209,7 +209,6 @@ class ClienteController extends Controller
        $em = $this->getDoctrine()->getEntityManager();
       
         $cotizacion = new Cotizacion();
-        $cotizacion->setId(1);
         $cotizacion->setFecha($fecha);
         $cotizacion->setNombre($nombre);
         $cotizacion->setEmpresa($empresa);
@@ -223,6 +222,40 @@ class ClienteController extends Controller
          $em->flush();
 
          echo "Solicitud enviada!!";
+        return $this->render('LumenAppBundle:Cliente:cotizacion.html.twig');
+
+    }
+
+    /**
+     * @Route("/insertcotizacion", name="insertcotizacion")
+     * @Template()
+     */
+    public function insertSolicitudAction()
+    {
+        $fecha = $_POST['txtFecha'];
+        $nombre = $_POST['txtNombre'];
+        $empresa = $_POST['txtEmpresa'];
+        $email = $_POST['txtEmail'];
+        $telefono = $_POST['txtTelefono'];
+        $detalle = $_POST['txtDetalle'];
+        $estado = "Enviada";
+
+        $em = $this->getDoctrine()->getEntityManager();
+
+        $cotizacion = new Cotizacion();
+        $cotizacion->setFecha($fecha);
+        $cotizacion->setNombre($nombre);
+        $cotizacion->setEmpresa($empresa);
+        $cotizacion->setEmail($email);
+        $cotizacion->setTelefono($telefono);
+        $cotizacion->setDetalleCotizacion($detalle);
+        $cotizacion->setEstado($estado);
+
+        //insertar el objeto
+        $em->persist($cotizacion); //pone el objeto en una cola para insertarlo
+        $em->flush();
+
+        echo "Solicitud enviada!!";
         return $this->render('LumenAppBundle:Cliente:cotizacion.html.twig');
 
     }
