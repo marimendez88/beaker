@@ -8,6 +8,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\HttpFoundation\Request;
 use Lumen\AppBundle\Entity\Cliente;
 use Lumen\AppBundle\Entity\Empresa;
+use Lumen\AppBundle\Entity\Cotizacion;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use JMS\DiExtraBundle\Tests\Metadata\Driver\Fixture\LoginType;
 use Symfony\Component\Form\FormError;
@@ -187,6 +188,41 @@ class ClienteController extends Controller
     public function cotizacionAction()
     {
 
+        return $this->render('LumenAppBundle:Cliente:cotizacion.html.twig');
+
+    }
+
+    /**
+     * @Route("/insertcotizacion", name="insertcotizacion")
+     * @Template()
+     */
+    public function insertCotizacionAction()
+    {       
+        $fecha = $_POST['txtFecha'];
+        $nombre = $_POST['txtNombre'];
+        $empresa = $_POST['txtEmpresa'];
+        $email = $_POST['txtEmail'];
+        $telefono = $_POST['txtTelefono'];
+        $detalle = $_POST['txtDetalle'];
+        $estado = "Enviada";
+
+       $em = $this->getDoctrine()->getEntityManager();
+      
+        $cotizacion = new Cotizacion();
+        $cotizacion->setId(1);
+        $cotizacion->setFecha($fecha);
+        $cotizacion->setNombre($nombre);
+        $cotizacion->setEmpresa($empresa);
+        $cotizacion->setEmail($email);
+        $cotizacion->setTelefono($telefono);
+        $cotizacion->setDetalleCotizacion($detalle);
+        $cotizacion->setEstado($estado);
+
+         //insertar el objeto
+         $em->persist($cotizacion); //pone el objeto en una cola para insertarlo
+         $em->flush();
+
+         echo "Solicitud enviada!!";
         return $this->render('LumenAppBundle:Cliente:cotizacion.html.twig');
 
     }
