@@ -180,6 +180,18 @@ class ClienteController extends Controller
         $this->redirect($this->generateUrl('lumen_app_bundle_indexClient'));
 
     }
+    /**
+     * @Route("/cotizacion", name="cotizacion")
+     * @Template()
+     */
+    public function cotizacionAction()
+    {
+
+        return $this->render('LumenAppBundle:Cliente:cotizacion.html.twig');
+
+    }
+
+
 
 
 
