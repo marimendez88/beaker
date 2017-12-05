@@ -15,6 +15,14 @@ cliente_app:
         _locale: es
     requirements:
          _locale: en|es
+admin_app:
+    resource: "@LumenAppBundle/Controller/AdminController.php"
+    type:     annotation
+    prefix:   /admin
+    defaults:
+        _locale: es
+    requirements:
+         _locale: en|es
 
 
 #rest:
@@ -93,4 +101,8 @@ lumen_app_bundle_registro:
 lumen_app_bundle_indexClient:
     path:      /cliente/index
     defaults:  { _controller: LumenAppBundle:Cliente:indexclient }
+
+lumen_app_bundle_indexAdmin:
+    path:      /admin/index
+    defaults:  { _controller: LumenAppBundle:Admin:indexAdmin }
 
