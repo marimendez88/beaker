@@ -227,7 +227,7 @@ class ClienteController extends Controller
     }
 
     /**
-     * @Route("/insertcotizacion", name="insertcotizacion")
+     * @Route("/insertSolicitud", name="insertSolicitud")
      * @Template()
      */
     public function insertSolicitudAction()
@@ -273,7 +273,29 @@ class ClienteController extends Controller
         return $this->render('LumenAppBundle:Cliente:verCotizaciones.html.twig', array('cotizaciones' => $cotizaciones));
 
     }
-   
+
+    /**
+     * @Route("/servicios", name="servicios")
+     * @Template()
+     */
+    public function serviciosAction()
+    {
+        $em = $this->getDoctrine()->getEntityManager();
+        $analisis = $em->getRepository('LumenAppBundle:Analisis')->findAll();
+        $clientes = $em->getRepository('LumenAppBundle:Cliente')->findAll();
+        $muestras = $em->getRepository('LumenAppBundle:Muestra')->findAll();
+        $tipoMuestras = $em->getRepository('LumenAppBundle:TipoMuestra')->findAll();
+
+        return $this->render('LumenAppBundle:Cliente:solicitud.html.twig', array(
+            'analisis' => $analisis,
+            'clientes' => $clientes,
+            'muestras' => $muestras,
+            'tipomuestras' => $tipoMuestras));
+
+
+    }
+
+
 
 
 

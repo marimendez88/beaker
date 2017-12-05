@@ -9,41 +9,80 @@
 
          
             <div class="widget-header"> <i class="icon-bookmark"></i>
-              <h3>Ingresar cotización</h3>
+              <h3>Ingresar Solicitud de Servicio</h3>
             </div>
-          
+
+
 
             <!-- /widget-header -->
     <div class="widget-content">
 
            
         <div class="shortcuts"> 
-            <form name="form1" id="form1" action="{{ path('insertcotizacion')}}" method="post">
-        
-                <label>Fecha:</label>
+            <form name="form1" id="form1" action="{{ path('insertSolicitud')}}" method="post">
+
+                <label text-align: left>Analisis</label>
+                <select class="form-control" name="analisis" data-width="100%" id="analisis" placeholder="Analisis">
+                    {% for analisis1 in analisis %}
+                        <option value="{{ analisis1.nombre}}">{{ analisis1.nombre}} </option>
+                    {% endfor %}
+                </select>
+                <label text-align: left>Cliente</label>
+                <select class="form-control"  name="cliente" data-width="100%" id="cliente" placeholder="Cliente">
+                    {% for cliente in clientes %}
+                        <option value="{{ cliente.nombre}} {{ cliente.apellido}}">{{ cliente.nombre}} {{ cliente.apellido}} </option>
+                    {% endfor %}
+                </select>
+                <label>Fecha Ingreso:</label>
                 <div class="input-group date">
                     <div class="input-group-addon">
                         <i class="fa fa-calendar"></i>
                     </div>
-                    <input type="text" class="form-control pull-right" id="txtFecha" name="txtFecha">
+                    <input type="text" class="form-control pull-right" id="txtFechaI" name="txtFecha">
+                </div>
+                <label>Fecha Muestra:</label>
+                <div class="input-group date">
+                    <div class="input-group-addon">
+                        <i class="fa fa-calendar"></i>
+                    </div>
+                    <input type="text" class="form-control pull-right" id="txtFechaM" name="txtFecha">
                 </div>
 
-                <label text-align: left>Nombre</label>
-                <input type="text" class="form-control" id="txtNombre" name="txtNombre" placeholder="Nombre">
+                <label text-align: left>Hora de Toma:</label>
+                <input type="text" class="form-control" id="txtHora" name="txtHora" placeholder="Hora de toma">
                     <br>
-                <label>Empresa</label>
-                <input type="text" class="form-control" id="txtEmpresa" name="txtEmpresa" placeholder="Empresa">
+                <label>PH:</label>
+                <input type="text" class="form-control" id="txtPH" name="txtPH" placeholder="PH">
                     <br>
-                <label>Email</label>
-                <input type="email" class="form-control" id="txtEmail" name="txtEmail" placeholder="Email">
+                <label>Temperatura:</label>
+                <input type="email" class="form-control" id="txtTemperatura" name="txtTemperatura" placeholder="Temperatura">
                     <br>
-                <label>Teléfono</label>
-                <input type="phone" class="form-control" id="txtTelefono"  name="txtTelefono" placeholder="Teléfono">
-                <label>Detalle Cotización</label>
+                <label>Recipiente:</label>
+                <select class="form-control"  name="cliente" data-width="100%" id="cliente">
+                    <option value="Vidrio">Vidrio </option>
+                    <option value="Plastico">Plastico </option>
+                    <option value="Esteril">Esteril </option>
+                    <option value="Otro">Otro </option>
+
+                </select>
+                <label text-align: left>Tipo de Muestra:</label>
+                <select class="form-control" name="tipoMuestra" data-width="100%" id="tipoMuestra">
+                    {% for muestra in muestras %}
+                        <option value="{{ muestra.nombre}}">{{ muestra.nombre}} </option>
+                    {% endfor %}
+                </select>
+                <label>Tipo Muestreo:</label>
+                <select class="form-control"  name="cliente" data-width="100%" id="cliente">
+                    <option value="Compuesto">Compuesto </option>
+                    <option value="Puntual">Puntual </option>
+
+                </select>
+
+                <label>Observaciones</label>
                 <textarea class="textarea" id ="txtDetalle" name ="txtDetalle" placeholder="Place some text here"
                     style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
-           
-            <input type="submit" value="Enviar cotización" class="btn btn-primary" name="btnAddr" id="btnAdd"/> </input>                                    
+
+            <input type="submit" value="Enviar Solicitud" class="btn btn-primary" name="btnAddr" id="btnAdd"/> </input>
 
             
             </form>

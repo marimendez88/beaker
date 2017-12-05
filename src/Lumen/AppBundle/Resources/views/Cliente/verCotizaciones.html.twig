@@ -21,14 +21,17 @@
             
              <table class="table table-striped" id="tableInfo">
                             <thead>
-                                <tr><td scope="col">Empresa</td>
+                                <tr><td scope="col">Fecha</td>
+                                    <td scope="col">Empresa</td>
                                     <td scope="col">Nombre</td>
                                     <td scope="col">Estado</td>
                                 </tr>
                             </thead>
                                 {%for cotizacion in cotizaciones%}
                                 <tbody>
-                                <tr><td>{{ cotizacion.getEmpresa() }}</td>
+                                <tr>
+                                    <td>{{ cotizacion.getFecha() }}</td>
+                                    <td>{{ cotizacion.getEmpresa() }}</td>
                                     <td>{{ cotizacion.getNombre() }}</td>
                                     <td>{{ cotizacion.getEstado() }}</td>
                                 </tr>
