@@ -2,6 +2,7 @@
 
 namespace Lumen\AppBundle\Controller;
 
+use Lumen\AppBundle\Entity\Analisis;
 use Lumen\AppBundle\Entity\SolicitudDeServicios;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -233,7 +234,9 @@ class ClienteController extends Controller
      */
     public function insertSolicitudAction()
     {
-        $analisis = $_POST['analisis'];
+
+
+        $analisis =  $_POST['analisis'];
         $cliente = $_POST['cliente'];
         $fechaI = $_POST['txtFechaI'];
         $fechaM = $_POST['txtFechaM'];
@@ -249,23 +252,24 @@ class ClienteController extends Controller
         $em = $this->getDoctrine()->getEntityManager();
 
         $solicitud = new SolicitudDeServicios();
+        $solicitud->setAnalisis($analisis);
         $solicitud->setCliente($cliente);
-        $solicitud
-        $cotizacion->setFecha($fecha);
-        $cotizacion->setNombre($nombre);
-        $cotizacion->setEmpresa($empresa);
-        $cotizacion->setEmail($email);
-        $cotizacion->setTelefono($telefono);
-        $cotizacion->setDetalleCotizacion($detalle);
-        $cotizacion->setEstado($estado);
-
-        //insertar el objeto
-        $em->persist($cotizacion); //pone el objeto en una cola para insertarlo
+        $solicitud->setFechaIngresoMuestra($fechaI);
+        $solicitud->setFechaTomaMuestra($fechaM);
+        $solicitud->setHoraTomaMuestra($hora);
+        $solicitud->setPH($ph);
+        $solicitud->setTemperatura($tempe);
+        $solicitud->setTipoRecipiente($recipiente);
+        $solicitud->setTipoMuestra($muestra);
+        $solicitud->setTipoMuestreo($tipoMuestreo);
+        $solicitud->setObservaciones($observaciones);
+        $solicitud->setEstado($estado);
+//
+        $em->persist($solicitud); //pone el objeto en una cola para insertarlo
         $em->flush();
-
+//
         echo "Solicitud enviada!!";
-        return $this->render('LumenAppBundle:Cliente:cotizacion.html.twig');
-
+        return $this->render('LumenAppBundle:Cliente:solicitud.html.twig');
     }
 
     /**
@@ -282,6 +286,23 @@ class ClienteController extends Controller
 
     }
 
+
+    /**
+     * @Route("/getSolicitud", name="getSolicitud")
+     * @Template()
+     */
+    public function getSolicitudAction()
+    {
+        $em = $this->getDoctrine()->getEntityManager();
+        $cotizaciones = $em->getRepository('LumenAppBundle:SolicitudDeServicios')->findAll();
+
+
+        return $this->render('LumenAppBundle:Cliente:verSolicitudes.html.twig', array('solicitudes' => $cotizaciones));
+
+    }
+
+
+
     /**
      * @Route("/servicios", name="servicios")
      * @Template()
@@ -291,7 +312,7 @@ class ClienteController extends Controller
         $em = $this->getDoctrine()->getEntityManager();
         $analisis = $em->getRepository('LumenAppBundle:Analisis')->findAll();
         $clientes = $em->getRepository('LumenAppBundle:Cliente')->findAll();
-        $muestras = $em->getRepository('LumenAppBundle:Muestra')->findAll();
+        $muestras = $em->getRepository('LumenAppBundle:TipoMuestra')->findAll();
         $tipoMuestras = $em->getRepository('LumenAppBundle:TipoMuestra')->findAll();
 
         return $this->render('LumenAppBundle:Cliente:solicitud.html.twig', array(

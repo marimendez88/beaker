@@ -9,7 +9,7 @@
 
          
             <div class="widget-header"> <i class="icon-bookmark"></i>
-              <h3>Ver cotizaciones</h3>
+              <h3>Ver Solicitudes</h3>
             </div>
           
 
@@ -21,18 +21,18 @@
             
              <table class="table table-striped" id="tableInfo">
                             <thead>
-                                <tr><td scope="col">Fecha</td>
-                                    <td scope="col">Empresa</td>
+                                <tr><td scope="col">Fecha Ingreso</td>
                                     <td scope="col">Nombre</td>
+                                    <td scope="col">Analisis</td>
                                     <td scope="col">Estado</td>
                                 </tr>
                             </thead>
-                                {%for cotizacion in cotizaciones%}
+                                {%for solicitud in solicitudes%}
                                 <tbody>
                                 <tr>
-                                    <td>{{ cotizacion.getFecha() }}</td>
-                                    <td>{{ cotizacion.getEmpresa() }}</td>
+                                    <td>{{ solicitud.getFechaI() }}</td>
                                     <td>{{ cotizacion.getNombre() }}</td>
+                                    <td>{{ cotizacion.getAnalisis() }}</td>
                                     <td>{{ cotizacion.getEstado() }}</td>
                                 </tr>
                                 </tbody>

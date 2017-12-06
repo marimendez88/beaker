@@ -2,8 +2,15 @@
 
 namespace Lumen\AppBundle\Entity;
 
+
+use Doctrine\ORM\Mapping as ORM;
+
+
 /**
  * SolicitudDeServicios
+ *
+ * @ORM\Table(name="solicitudDeServicios")
+ * @ORM\Entity(repositoryClass="Lumen\AppBundle\Repository\SolicitudDeServiciosRepository")
  */
 class SolicitudDeServicios
 {
@@ -75,6 +82,13 @@ class SolicitudDeServicios
      */
     private $observaciones;
 
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="estado", type="string", length=100, nullable=false)
+     */
+    private $estado;
 
     /**
      * Get id
@@ -349,5 +363,29 @@ class SolicitudDeServicios
     {
         return $this->observaciones;
     }
+    /**
+     * Set estado
+     *
+     * @param string $estado
+     *
+     * @return Cotizacion
+     */
+    public function setEstado($estado)
+    {
+        $this->estado = $estado;
+
+        return $this;
+    }
+
+    /**
+     * Get estado
+     *
+     * @return string
+     */
+    public function getEstado()
+    {
+        return $this->estado;
+    }
+
 }
 
