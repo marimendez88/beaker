@@ -58,7 +58,7 @@
                 <input type="email" class="form-control" id="txtTemperatura" name="txtTemperatura" placeholder="Temperatura">
                     <br>
                 <label>Recipiente:</label>
-                <select class="form-control"  name="cliente" data-width="100%" id="cliente">
+                <select class="form-control"  name="cliente" data-width="100%" id="recipiente">
                     <option value="Vidrio">Vidrio </option>
                     <option value="Plastico">Plastico </option>
                     <option value="Esteril">Esteril </option>
@@ -66,13 +66,13 @@
 
                 </select>
                 <label text-align: left>Tipo de Muestra:</label>
-                <select class="form-control" name="tipoMuestra" data-width="100%" id="tipoMuestra">
+                <select class="form-control" name="tipoMuestra" data-width="100%" id="muestra">
                     {% for muestra in muestras %}
                         <option value="{{ muestra.nombre}}">{{ muestra.nombre}} </option>
                     {% endfor %}
                 </select>
                 <label>Tipo Muestreo:</label>
-                <select class="form-control"  name="cliente" data-width="100%" id="cliente">
+                <select class="form-control"  name="cliente" data-width="100%" id="tipoMuestreo">
                     <option value="Compuesto">Compuesto </option>
                     <option value="Puntual">Puntual </option>
 

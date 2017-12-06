@@ -15,14 +15,7 @@ cliente_app:
         _locale: es
     requirements:
          _locale: en|es
-#admin_app:
-#    resource: "@LumenAppBundle/Controller/AdminController.php"
-#    type:     annotation
-#    prefix:   /admin
-#    defaults:
-#        _locale: es
-#    requirements:
-#         _locale: en|es
+
 
 
 #rest:
@@ -90,10 +83,6 @@ lumen_app_bundle_login:
     path:      /cliente/loginInicio
     defaults:  { _controller: LumenAppBundle:Cliente:loginC }
 
-lumen_app_bundle_logout:
-    path:      /cliente/logout
-    defaults:  { _controller: LumenAppBundle:Cliente:logout }
-
 lumen_app_bundle_registro:
     path:      /cliente/registroInicio
     defaults:  { _controller: LumenAppBundle:Cliente:registro }
@@ -102,7 +91,7 @@ lumen_app_bundle_indexClient:
     path:      /cliente/index
     defaults:  { _controller: LumenAppBundle:Cliente:indexclient }
 
-#lumen_app_bundle_indexAdmin:
-#    path:      /admin/index
-#    defaults:  { _controller: LumenAppBundle:Admin:indexAdmin }
+lumen_app_bundle_admin_login:
+    path:      /gerencia/login
+    defaults:  { _controller: LumenAppBundle:Admin:loginInicio }
 

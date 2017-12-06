@@ -53,23 +53,11 @@ class Admin
     /**
      * @var string
      *
-     * @ORM\Column(name="empresa", type="string", length=100, nullable=true)
-     */
-    private $empresa;
-
-    /**
-     * @var string
-     *
      * @ORM\Column(name="clave", type="string", length=100, nullable=false)
      */
     private $clave;
 
 
-    /**
-     * @ORM\OneToMany(targetEntity="Lumen\AppBundle\Entity\SolicitudDeServicios", mappedBy="cliente")
-     *
-     */
-    private $solicitud;
 
 
 
@@ -206,52 +194,5 @@ class Admin
 
 
 
-    /**
-     * Set empresa
-     *
-     * @param \Lumen\AppBundle\Entity\Empresa $empresa
-     *
-     * @return Cliente
-     */
-    public function setEmpresa(\Lumen\AppBundle\Entity\Empresa $empresa )
-    {
-        $this->empresa = $empresa;
-
-        return $this;
-    }
-
-    /**
-     * Get empresa
-     *
-     * @return \Lumen\AppBundle\Entity\Empresa
-     */
-    public function getEmpresa()
-    {
-        return $this->empresa;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getSolicitud()
-    {
-        return $this->solicitud;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getSolicitudToArray()
-    {
-        return $this->solicitud->toArray();
-    }
-
-    /**
-     * @param mixed $solicitud
-     */
-    public function setSolicitud($solicitud)
-    {
-        $this->solicitud = $solicitud;
-    }
 }
 

@@ -2,6 +2,7 @@
 
 namespace Lumen\AppBundle\Controller;
 
+use Lumen\AppBundle\Entity\SolicitudDeServicios;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
@@ -232,17 +233,24 @@ class ClienteController extends Controller
      */
     public function insertSolicitudAction()
     {
-        $fecha = $_POST['txtFecha'];
-        $nombre = $_POST['txtNombre'];
-        $empresa = $_POST['txtEmpresa'];
-        $email = $_POST['txtEmail'];
-        $telefono = $_POST['txtTelefono'];
-        $detalle = $_POST['txtDetalle'];
+        $analisis = $_POST['analisis'];
+        $cliente = $_POST['cliente'];
+        $fechaI = $_POST['txtFechaI'];
+        $fechaM = $_POST['txtFechaM'];
+        $hora = $_POST['txtHora'];
+        $ph = $_POST['txtPH'];
+        $tempe = $_POST['txtTemperatura'];
+        $recipiente = $_POST['recipiente'];
+        $muestra = $_POST['muestra'];
+        $tipoMuestreo = $_POST['tipoMuestreo'];
+        $observaciones = $_POST['txtDetalle'];
         $estado = "Enviada";
 
         $em = $this->getDoctrine()->getEntityManager();
 
-        $cotizacion = new Cotizacion();
+        $solicitud = new SolicitudDeServicios();
+        $solicitud->setCliente($cliente);
+        $solicitud
         $cotizacion->setFecha($fecha);
         $cotizacion->setNombre($nombre);
         $cotizacion->setEmpresa($empresa);
