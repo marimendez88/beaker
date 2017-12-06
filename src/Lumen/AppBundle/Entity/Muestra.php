@@ -99,6 +99,12 @@ class Muestra
      */
     private $detalleMuestra;
 
+     /**
+     * @ORM\OneToMany(targetEntity="Lumen\AppBundle\Entity\SolicitudDeServicios", mappedBy="tipoMuestra")
+     *
+     */
+    private $solicitud;
+
 
     /**
      * Get id
